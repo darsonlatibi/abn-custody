@@ -23,6 +23,7 @@ import {
 } from "lucide-react";
 //import { useNavigate } from "react-router-dom";
 import heroImage from "../../assets/images/1.jpg";
+import OilAndGasBackground from "../../components/svg/OilAndGasBackground";
 
 import "./Home.css";
 
@@ -164,6 +165,13 @@ const Home: React.FC = () => {
       ===================================================== */}
 
       <section className="home-hero">
+        {/* ===================================================
+        CUSTODY METERING BACKGROUND
+        =================================================== */}
+        <div className="home-hero-background" aria-hidden="true">
+          {" "}
+          <OilAndGasBackground />{" "}
+        </div>
         <div className="home-hero-grid" />
 
         <div className="home-container home-hero-content">

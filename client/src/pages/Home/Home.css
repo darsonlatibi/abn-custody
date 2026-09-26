@@ -45,7 +45,21 @@ HERO
 
   border-bottom: 1px solid var(--border-color, #e5e7eb);
 }
-
+/* SVG background */
+.home-hero-background {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+.home-hero-background svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
 .home-hero-grid {
   position: absolute;
   inset: 0;
