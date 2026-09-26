@@ -1,0 +1,1472 @@
+/* =========================================================
+   ABN DIGITAL & INDUSTRIAL TECHNOLOGY
+   SUPPORT / CONTRIBUTION
+   FOLLOW INBOX.CSS DESIGN SYSTEM
+
+   Master:
+   - Max width       : 1180px
+   - Desktop gutter  : 24px
+   - Sidebar         : 220px
+   - Border radius   : 14px
+   - Primary color   : #0f766e
+   - Responsive      : 1100 / 900 / 760 / 640 / 480
+   ========================================================= */
+
+/* =========================================================
+   PAGE
+   ========================================================= */
+
+.support-page {
+  width: 100%;
+  min-height: 100%;
+  padding: 40px 0 70px;
+  box-sizing: border-box;
+  color: var(--text-primary, #172033);
+  background: var(--background-primary, #ffffff);
+}
+
+.support-page > * {
+  width: min(1180px, calc(100% - 48px));
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.support-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.support-header-main {
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.support-header-icon {
+  width: 42px;
+  height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  border: 1px solid rgba(15, 118, 110, 0.12);
+  border-radius: 11px;
+  color: #0f766e;
+  background: rgba(15, 118, 110, 0.07);
+}
+
+.support-header-main h1 {
+  margin: 0;
+  color: var(--text-primary, #172033);
+  font-size: clamp(28px, 3vw, 34px);
+  line-height: 1.1;
+  letter-spacing: -0.035em;
+  font-weight: 800;
+}
+
+.support-header-main p {
+  margin: 7px 0 0;
+  color: var(--text-secondary, #64748b);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.support-header-status {
+  min-height: 30px;
+  padding: 0 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  flex: 0 0 auto;
+  border: 1px solid rgba(15, 118, 110, 0.12);
+  border-radius: 999px;
+  color: #0f766e;
+  background: rgba(15, 118, 110, 0.07);
+  font-size: 10px;
+  font-weight: 800;
+}
+
+/* =========================================================
+   MAIN LAYOUT
+   ========================================================= */
+
+.support-layout {
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr);
+  gap: 18px;
+  min-height: 650px;
+}
+
+/* =========================================================
+   SIDEBAR
+   ========================================================= */
+
+.support-sidebar {
+  min-width: 0;
+  padding: 16px;
+  box-sizing: border-box;
+  border: 1px solid var(--border-color, #e2e8f0);
+  border-radius: 14px;
+  background: var(--surface-primary, #ffffff);
+}
+
+.support-sidebar-section {
+  width: 100%;
+}
+
+.support-sidebar-title {
+  margin-bottom: 9px;
+  color: var(--text-secondary, #64748b);
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
+
+.support-nav-item {
+  width: 100%;
+  min-height: 40px;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  box-sizing: border-box;
+  border: 0;
+  border-radius: 9px;
+  color: var(--text-secondary, #64748b);
+  background: transparent;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+  transition:
+    background 0.18s ease,
+    color 0.18s ease;
+}
+
+.support-nav-item:hover {
+  color: var(--text-primary, #172033);
+  background: var(--surface-secondary, #f8fafc);
+}
+
+.support-nav-item.active {
+  color: #0f766e;
+  background: rgba(15, 118, 110, 0.08);
+  font-weight: 800;
+}
+
+.support-nav-item svg {
+  width: 18px;
+  height: 18px;
+  flex: 0 0 auto;
+}
+
+/* =========================================================
+   SIDEBAR NOTE
+   ========================================================= */
+
+.support-sidebar-note {
+  margin-top: 22px;
+  padding: 12px;
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  box-sizing: border-box;
+  border: 1px solid rgba(15, 118, 110, 0.1);
+  border-radius: 10px;
+  background: rgba(15, 118, 110, 0.04);
+}
+
+.support-sidebar-note > svg {
+  flex: 0 0 auto;
+  margin-top: 1px;
+  color: #0f766e;
+}
+
+.support-sidebar-note strong {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--text-primary, #172033);
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.support-sidebar-note p {
+  margin: 0;
+  color: var(--text-secondary, #64748b);
+  font-size: 9px;
+  line-height: 1.6;
+}
+
+/* =========================================================
+   MAIN
+   ========================================================= */
+
+.support-main {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* =========================================================
+   SUPPORT CARD
+   ========================================================= */
+
+.support-card {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid var(--border-color, #e2e8f0);
+  border-radius: 14px;
+  background: var(--surface-primary, #ffffff);
+  box-shadow: 0 8px 25px rgba(15, 23, 42, 0.03);
+}
+
+/* =========================================================
+   CARD HEADER
+   ========================================================= */
+
+.support-card-header {
+  min-height: 78px;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  border-bottom: 1px solid var(--border-color, #e2e8f0);
+  background: var(--surface-primary, #ffffff);
+}
+
+.support-card-title {
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.support-card-icon {
+  width: 42px;
+  height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  border-radius: 11px;
+  color: #0f766e;
+  background: rgba(15, 118, 110, 0.07);
+}
+
+.support-card-icon.coffee {
+  color: #a16207;
+  background: rgba(234, 179, 8, 0.09);
+}
+
+.support-card-icon.donation {
+  color: #be123c;
+  background: rgba(244, 63, 94, 0.08);
+}
+
+.support-card-icon.bank {
+  color: #0369a1;
+  background: rgba(14, 165, 233, 0.08);
+}
+
+.support-card-title h2 {
+  margin: 0;
+  color: var(--text-primary, #172033);
+  font-size: 17px;
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+  font-weight: 800;
+}
+
+.support-card-title p {
+  margin: 5px 0 0;
+  color: var(--text-secondary, #64748b);
+  font-size: 10px;
+  line-height: 1.55;
+}
+
+/* =========================================================
+   CARD BODY
+   ========================================================= */
+
+.support-card-body {
+  padding: 20px;
+}
+
+/* =========================================================
+   INFO BOX
+   ========================================================= */
+
+.support-info-box {
+  margin-bottom: 22px;
+  padding: 13px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  box-sizing: border-box;
+  border: 1px solid rgba(15, 118, 110, 0.1);
+  border-radius: 10px;
+  background: rgba(15, 118, 110, 0.04);
+}
+
+.support-info-box > svg {
+  flex: 0 0 auto;
+  margin-top: 1px;
+  color: #0f766e;
+}
+
+.support-info-box strong {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--text-primary, #172033);
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.support-info-box p {
+  margin: 0;
+  color: var(--text-secondary, #64748b);
+  font-size: 10px;
+  line-height: 1.7;
+}
+
+/* =========================================================
+   SECTION
+   ========================================================= */
+
+.support-section {
+  margin-bottom: 20px;
+}
+
+.support-section-label {
+  margin-bottom: 9px;
+  color: var(--text-primary, #172033);
+  font-size: 11px;
+  font-weight: 800;
+}
+
+/* =========================================================
+   AMOUNT GRID
+   ========================================================= */
+
+.support-amount-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 7px;
+}
+
+.support-amount-button {
+  min-height: 46px;
+  padding: 0 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  border: 1px solid var(--border-color, #dbe2ea);
+  border-radius: 9px;
+  color: var(--text-secondary, #64748b);
+  background: var(--surface-primary, #ffffff);
+  font: inherit;
+  font-size: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    background 0.18s ease,
+    border-color 0.18s ease,
+    color 0.18s ease,
+    transform 0.18s ease;
+}
+
+.support-amount-button:hover {
+  color: #0f766e;
+  border-color: rgba(15, 118, 110, 0.3);
+  background: rgba(15, 118, 110, 0.04);
+  transform: translateY(-1px);
+}
+
+.support-amount-button.active {
+  border-color: #0f766e;
+  color: #ffffff;
+  background: #0f766e;
+  box-shadow: 0 7px 18px rgba(15, 118, 110, 0.13);
+}
+
+/* =========================================================
+   CUSTOM AMOUNT
+   ========================================================= */
+
+.support-input-wrapper {
+  width: 100%;
+  height: 42px;
+  padding: 0 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-sizing: border-box;
+  border: 1px solid var(--border-color, #dbe2ea);
+  border-radius: 9px;
+  color: #0f766e;
+  background: var(--surface-secondary, #f8fafc);
+  transition:
+    border-color 0.18s ease,
+    box-shadow 0.18s ease;
+}
+
+.support-input-wrapper:focus-within {
+  border-color: rgba(15, 118, 110, 0.45);
+  box-shadow: 0 0 0 3px rgba(15, 118, 110, 0.08);
+}
+
+.support-input-wrapper span {
+  flex: 0 0 auto;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.support-input-wrapper input {
+  width: 100%;
+  min-width: 0;
+  height: 100%;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  color: var(--text-primary, #172033);
+  background: transparent;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.support-input-wrapper input::placeholder {
+  color: var(--text-secondary, #64748b);
+  font-weight: 400;
+}
+
+.support-section > small {
+  display: block;
+  margin-top: 6px;
+  color: var(--text-secondary, #64748b);
+  font-size: 9px;
+}
+
+/* =========================================================
+   TOTAL
+   ========================================================= */
+
+.support-total {
+  min-height: 58px;
+  margin-top: 4px;
+  padding: 0 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  box-sizing: border-box;
+  border-top: 1px solid var(--border-color, #e2e8f0);
+  border-bottom: 1px solid var(--border-color, #e2e8f0);
+}
+
+.support-total span {
+  color: var(--text-secondary, #64748b);
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.support-total strong {
+  color: #0f766e;
+  font-size: 17px;
+  font-weight: 800;
+}
+
+/* =========================================================
+   ERROR
+   ========================================================= */
+
+.support-error {
+  margin-top: 12px;
+  padding: 10px 12px;
+  box-sizing: border-box;
+  border: 1px solid rgba(220, 38, 38, 0.12);
+  border-radius: 8px;
+  color: #b91c1c;
+  background: rgba(220, 38, 38, 0.05);
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+/* =========================================================
+   PAYMENT BUTTON
+   ========================================================= */
+
+.support-payment-button {
+  width: 100%;
+  min-height: 46px;
+  margin-top: 14px;
+  padding: 0 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  box-sizing: border-box;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  color: #ffffff;
+  background: #0f766e;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 10px 25px rgba(15, 118, 110, 0.14);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.support-payment-button:hover:not(:disabled) {
+  background: #115e59;
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(15, 118, 110, 0.2);
+}
+
+.support-payment-button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.support-payment-button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* =========================================================
+   PAYMENT NOTE
+   ========================================================= */
+
+.support-payment-note {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  color: var(--text-secondary, #64748b);
+  font-size: 9px;
+  line-height: 1.5;
+}
+
+.support-payment-note svg {
+  flex: 0 0 auto;
+  color: #0f766e;
+}
+
+/* =========================================================
+   DONATION
+   ========================================================= */
+
+.support-donation-content {
+  max-width: 620px;
+  margin: 0 auto;
+  padding: 28px 20px;
+  text-align: center;
+}
+
+.support-donation-icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  color: #be123c;
+  background: rgba(244, 63, 94, 0.08);
+}
+
+.support-donation-content h3 {
+  margin: 0 0 8px;
+  color: var(--text-primary, #172033);
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.support-donation-content p {
+  max-width: 540px;
+  margin: 0 auto;
+  color: var(--text-secondary, #64748b);
+  font-size: 11px;
+  line-height: 1.75;
+}
+
+.support-donation-content .support-payment-button {
+  max-width: 360px;
+  margin: 20px auto 0;
+}
+
+/* =========================================================
+   BANK TRANSFER
+   ========================================================= */
+
+.support-bank-card {
+  min-height: 68px;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-sizing: border-box;
+  border: 1px solid var(--border-color, #e2e8f0);
+  border-radius: 10px;
+  background: var(--surface-secondary, #f8fafc);
+}
+
+.support-bank-logo {
+  width: 42px;
+  height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  border-radius: 10px;
+  color: #0369a1;
+  background: rgba(14, 165, 233, 0.09);
+}
+
+.support-bank-info {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.support-bank-info span,
+.support-bank-account span,
+.support-bank-holder span {
+  color: var(--text-secondary, #64748b);
+  font-size: 9px;
+  font-weight: 700;
+}
+
+.support-bank-info strong,
+.support-bank-account strong,
+.support-bank-holder strong {
+  color: var(--text-primary, #172033);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+/* =========================================================
+   BANK ACCOUNT
+   ========================================================= */
+
+.support-bank-account {
+  min-height: 64px;
+  margin-top: 8px;
+  padding: 0 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  box-sizing: border-box;
+  border: 1px solid var(--border-color, #e2e8f0);
+  border-radius: 10px;
+  background: var(--surface-primary, #ffffff);
+}
+
+.support-bank-account > div {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.support-bank-account strong {
+  font-size: 15px;
+  letter-spacing: 0.04em;
+}
+
+/* =========================================================
+   COPY BUTTON
+   ========================================================= */
+
+.support-copy-button {
+  min-height: 34px;
+  padding: 0 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  flex: 0 0 auto;
+  border: 1px solid var(--border-color, #dbe2ea);
+  border-radius: 8px;
+  color: var(--text-secondary, #64748b);
+  background: var(--surface-primary, #ffffff);
+  font: inherit;
+  font-size: 9px;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    background 0.18s ease,
+    border-color 0.18s ease,
+    color 0.18s ease;
+}
+
+.support-copy-button:hover {
+  color: #0f766e;
+  border-color: rgba(15, 118, 110, 0.25);
+  background: rgba(15, 118, 110, 0.05);
+}
+
+/* =========================================================
+   BANK HOLDER
+   ========================================================= */
+
+.support-bank-holder {
+  min-height: 58px;
+  margin-top: 8px;
+  padding: 0 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+  box-sizing: border-box;
+  border: 1px solid var(--border-color, #e2e8f0);
+  border-radius: 10px;
+  background: var(--surface-primary, #ffffff);
+}
+
+/* =========================================================
+   BANK NOTE
+   ========================================================= */
+
+.support-bank-note {
+  margin-top: 14px;
+  padding: 12px;
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  box-sizing: border-box;
+  border: 1px solid rgba(15, 118, 110, 0.1);
+  border-radius: 10px;
+  color: var(--text-secondary, #64748b);
+  background: rgba(15, 118, 110, 0.04);
+}
+
+.support-bank-note svg {
+  flex: 0 0 auto;
+  margin-top: 1px;
+  color: #0f766e;
+}
+
+.support-bank-note p {
+  margin: 0;
+  font-size: 10px;
+  line-height: 1.65;
+}
+
+/* =========================================================
+   FOOTER CARD
+   ========================================================= */
+
+.support-footer-card {
+  min-height: 68px;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  box-sizing: border-box;
+  border: 1px solid var(--border-color, #e2e8f0);
+  border-radius: 14px;
+  background: var(--surface-primary, #ffffff);
+}
+
+.support-footer-icon {
+  width: 38px;
+  height: 38px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  border-radius: 10px;
+  color: #0f766e;
+  background: rgba(15, 118, 110, 0.07);
+}
+
+.support-footer-card strong {
+  display: block;
+  margin-bottom: 3px;
+  color: var(--text-primary, #172033);
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.support-footer-card p {
+  margin: 0;
+  color: var(--text-secondary, #64748b);
+  font-size: 9px;
+  line-height: 1.55;
+}
+
+/* =========================================================
+   DARK MODE
+   ========================================================= */
+
+[data-theme="dark"] .support-page {
+  color: #f8fafc;
+  background: #0b1220;
+}
+
+[data-theme="dark"] .support-header-icon {
+  border-color: rgba(94, 234, 212, 0.12);
+  color: #5eead4;
+  background: rgba(20, 184, 166, 0.08);
+}
+
+[data-theme="dark"] .support-header-main h1 {
+  color: #f8fafc;
+}
+
+[data-theme="dark"] .support-header-main p {
+  color: #94a3b8;
+}
+
+[data-theme="dark"] .support-header-status {
+  border-color: rgba(94, 234, 212, 0.12);
+  color: #5eead4;
+  background: rgba(20, 184, 166, 0.08);
+}
+
+/* =========================================================
+   DARK — SIDEBAR / CARDS
+   ========================================================= */
+
+[data-theme="dark"] .support-sidebar,
+[data-theme="dark"] .support-card,
+[data-theme="dark"] .support-footer-card {
+  border-color: rgba(255, 255, 255, 0.08);
+  background: #111827;
+}
+
+[data-theme="dark"] .support-card {
+  box-shadow: none;
+}
+
+/* =========================================================
+   DARK — NAV
+   ========================================================= */
+
+[data-theme="dark"] .support-sidebar-title {
+  color: #94a3b8;
+}
+
+[data-theme="dark"] .support-nav-item {
+  color: #94a3b8;
+}
+
+[data-theme="dark"] .support-nav-item:hover {
+  color: #f8fafc;
+  background: #172033;
+}
+
+[data-theme="dark"] .support-nav-item.active {
+  color: #5eead4;
+  background: rgba(20, 184, 166, 0.08);
+}
+
+/* =========================================================
+   DARK — SIDEBAR NOTE
+   ========================================================= */
+
+[data-theme="dark"] .support-sidebar-note,
+[data-theme="dark"] .support-info-box,
+[data-theme="dark"] .support-bank-note {
+  border-color: rgba(94, 234, 212, 0.1);
+  background: rgba(20, 184, 166, 0.05);
+}
+
+[data-theme="dark"] .support-sidebar-note strong,
+[data-theme="dark"] .support-info-box strong {
+  color: #f8fafc;
+}
+
+[data-theme="dark"] .support-sidebar-note p,
+[data-theme="dark"] .support-info-box p {
+  color: #94a3b8;
+}
+
+[data-theme="dark"] .support-sidebar-note > svg,
+[data-theme="dark"] .support-info-box > svg,
+[data-theme="dark"] .support-bank-note svg {
+  color: #5eead4;
+}
+
+/* =========================================================
+   DARK — CARD HEADER
+   ========================================================= */
+
+[data-theme="dark"] .support-card-header {
+  border-color: rgba(255, 255, 255, 0.08);
+  background: #111827;
+}
+
+[data-theme="dark"] .support-card-title h2 {
+  color: #f8fafc;
+}
+
+[data-theme="dark"] .support-card-title p {
+  color: #94a3b8;
+}
+
+[data-theme="dark"] .support-card-icon {
+  color: #5eead4;
+  background: rgba(20, 184, 166, 0.08);
+}
+
+[data-theme="dark"] .support-card-icon.coffee {
+  color: #facc15;
+  background: rgba(234, 179, 8, 0.08);
+}
+
+[data-theme="dark"] .support-card-icon.donation {
+  color: #fb7185;
+  background: rgba(244, 63, 94, 0.08);
+}
+
+[data-theme="dark"] .support-card-icon.bank {
+  color: #38bdf8;
+  background: rgba(14, 165, 233, 0.08);
+}
+
+/* =========================================================
+   DARK — AMOUNTS
+   ========================================================= */
+
+[data-theme="dark"] .support-amount-button {
+  border-color: rgba(255, 255, 255, 0.08);
+  color: #94a3b8;
+  background: #111827;
+}
+
+[data-theme="dark"] .support-amount-button:hover {
+  color: #5eead4;
+  border-color: rgba(94, 234, 212, 0.2);
+  background: rgba(20, 184, 166, 0.06);
+}
+
+[data-theme="dark"] .support-amount-button.active {
+  border-color: #0f766e;
+  color: #ffffff;
+  background: #0f766e;
+}
+
+/* =========================================================
+   DARK — INPUT
+   ========================================================= */
+
+[data-theme="dark"] .support-input-wrapper {
+  border-color: rgba(255, 255, 255, 0.08);
+  color: #5eead4;
+  background: #0f172a;
+}
+
+[data-theme="dark"] .support-input-wrapper:focus-within {
+  border-color: rgba(94, 234, 212, 0.4);
+  box-shadow: 0 0 0 3px rgba(20, 184, 166, 0.08);
+}
+
+[data-theme="dark"] .support-input-wrapper input {
+  color: #f8fafc;
+}
+
+[data-theme="dark"] .support-input-wrapper input::placeholder {
+  color: #94a3b8;
+}
+
+[data-theme="dark"] .support-section-label {
+  color: #f8fafc;
+}
+
+[data-theme="dark"] .support-section > small {
+  color: #94a3b8;
+}
+
+/* =========================================================
+   DARK — TOTAL
+   ========================================================= */
+
+[data-theme="dark"] .support-total {
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+[data-theme="dark"] .support-total span {
+  color: #94a3b8;
+}
+
+[data-theme="dark"] .support-total strong {
+  color: #5eead4;
+}
+
+/* =========================================================
+   DARK — PAYMENT NOTE
+   ========================================================= */
+
+[data-theme="dark"] .support-payment-note {
+  color: #94a3b8;
+}
+
+[data-theme="dark"] .support-payment-note svg {
+  color: #5eead4;
+}
+
+/* =========================================================
+   DARK — DONATION
+   ========================================================= */
+
+[data-theme="dark"] .support-donation-icon {
+  color: #fb7185;
+  background: rgba(244, 63, 94, 0.08);
+}
+
+[data-theme="dark"] .support-donation-content h3 {
+  color: #f8fafc;
+}
+
+[data-theme="dark"] .support-donation-content p {
+  color: #94a3b8;
+}
+
+/* =========================================================
+   DARK — BANK
+   ========================================================= */
+
+[data-theme="dark"] .support-bank-card,
+[data-theme="dark"] .support-bank-account,
+[data-theme="dark"] .support-bank-holder {
+  border-color: rgba(255, 255, 255, 0.08);
+  background: #0f172a;
+}
+
+[data-theme="dark"] .support-bank-logo {
+  color: #38bdf8;
+  background: rgba(14, 165, 233, 0.08);
+}
+
+[data-theme="dark"] .support-bank-info span,
+[data-theme="dark"] .support-bank-account span,
+[data-theme="dark"] .support-bank-holder span {
+  color: #94a3b8;
+}
+
+[data-theme="dark"] .support-bank-info strong,
+[data-theme="dark"] .support-bank-account strong,
+[data-theme="dark"] .support-bank-holder strong {
+  color: #f8fafc;
+}
+
+[data-theme="dark"] .support-copy-button {
+  border-color: rgba(255, 255, 255, 0.08);
+  color: #94a3b8;
+  background: #111827;
+}
+
+[data-theme="dark"] .support-copy-button:hover {
+  color: #5eead4;
+  border-color: rgba(94, 234, 212, 0.2);
+  background: rgba(20, 184, 166, 0.06);
+}
+
+[data-theme="dark"] .support-bank-note p {
+  color: #94a3b8;
+}
+
+/* =========================================================
+   DARK — FOOTER
+   ========================================================= */
+
+[data-theme="dark"] .support-footer-card {
+  border-color: rgba(255, 255, 255, 0.08);
+  background: #111827;
+}
+
+[data-theme="dark"] .support-footer-icon {
+  color: #5eead4;
+  background: rgba(20, 184, 166, 0.08);
+}
+
+[data-theme="dark"] .support-footer-card strong {
+  color: #f8fafc;
+}
+
+[data-theme="dark"] .support-footer-card p {
+  color: #94a3b8;
+}
+
+/* =========================================================
+   ERROR — DARK
+   ========================================================= */
+
+[data-theme="dark"] .support-error {
+  border-color: rgba(248, 113, 113, 0.14);
+  color: #fca5a5;
+  background: rgba(220, 38, 38, 0.08);
+}
+
+/* =========================================================
+   RESPONSIVE — 1100px
+   ========================================================= */
+
+@media (max-width: 1100px) {
+  .support-layout {
+    grid-template-columns: 200px minmax(0, 1fr);
+  }
+
+  .support-amount-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* =========================================================
+   RESPONSIVE — 900px
+   ========================================================= */
+
+@media (max-width: 900px) {
+  .support-page {
+    padding-top: 32px;
+  }
+
+  .support-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .support-sidebar {
+    padding: 12px;
+  }
+
+  .support-nav-item {
+    flex: 1 1 140px;
+  }
+
+  .support-sidebar-note {
+    margin-top: 12px;
+  }
+}
+
+/* =========================================================
+   RESPONSIVE — 760px
+   ========================================================= */
+
+@media (max-width: 760px) {
+  .support-page > * {
+    width: min(100% - 32px, 1180px);
+  }
+
+  .support-header {
+    align-items: flex-start;
+  }
+
+  .support-header-main {
+    align-items: flex-start;
+  }
+
+  .support-header-status {
+    margin-top: 2px;
+  }
+
+  .support-layout {
+    gap: 14px;
+  }
+
+  .support-nav-item {
+    min-height: 38px;
+  }
+
+  .support-card-header {
+    min-height: 70px;
+    padding: 0 16px;
+  }
+
+  .support-card-body {
+    padding: 16px;
+  }
+
+  .support-amount-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .support-footer-card {
+    padding: 12px;
+  }
+}
+
+/* =========================================================
+   RESPONSIVE — 640px
+   ========================================================= */
+
+@media (max-width: 640px) {
+  .support-page {
+    padding: 24px 0 50px;
+  }
+
+  .support-header {
+    gap: 12px;
+  }
+
+  .support-header-icon {
+    width: 38px;
+    height: 38px;
+  }
+
+  .support-header-main h1 {
+    font-size: 26px;
+  }
+
+  .support-header-main p {
+    font-size: 11px;
+  }
+
+  .support-header-status {
+    min-height: 28px;
+    padding: 0 8px;
+    font-size: 9px;
+  }
+
+  .support-sidebar {
+    padding: 10px;
+  }
+
+  .support-nav-item {
+    flex-basis: 100%;
+  }
+
+  .support-card-header {
+    min-height: 68px;
+  }
+
+  .support-card-title {
+    gap: 10px;
+  }
+
+  .support-card-icon {
+    width: 38px;
+    height: 38px;
+  }
+
+  .support-card-title h2 {
+    font-size: 15px;
+  }
+
+  .support-card-title p {
+    font-size: 9px;
+  }
+
+  .support-info-box {
+    margin-bottom: 18px;
+  }
+
+  .support-amount-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .support-amount-button {
+    min-height: 44px;
+  }
+
+  .support-total {
+    min-height: 54px;
+  }
+
+  .support-total strong {
+    font-size: 15px;
+  }
+
+  .support-donation-content {
+    padding: 20px 8px;
+  }
+
+  .support-donation-content h3 {
+    font-size: 16px;
+  }
+
+  .support-bank-account {
+    align-items: center;
+  }
+
+  .support-bank-account strong {
+    font-size: 13px;
+  }
+}
+
+/* =========================================================
+   RESPONSIVE — 480px
+   ========================================================= */
+
+@media (max-width: 480px) {
+  .support-page > * {
+    width: min(100% - 24px, 1180px);
+  }
+
+  .support-page {
+    padding-top: 18px;
+  }
+
+  .support-header {
+    gap: 10px;
+  }
+
+  .support-header-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .support-header-main h1 {
+    font-size: 23px;
+  }
+
+  .support-header-main p {
+    font-size: 10px;
+  }
+
+  .support-header-status {
+    display: none;
+  }
+
+  .support-card-header {
+    min-height: 64px;
+    padding: 0 13px;
+  }
+
+  .support-card-body {
+    padding: 13px;
+  }
+
+  .support-card-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .support-card-title h2 {
+    font-size: 14px;
+  }
+
+  .support-card-title p {
+    font-size: 8px;
+  }
+
+  .support-info-box {
+    padding: 10px;
+  }
+
+  .support-info-box strong {
+    font-size: 10px;
+  }
+
+  .support-info-box p {
+    font-size: 9px;
+  }
+
+  .support-amount-grid {
+    gap: 6px;
+  }
+
+  .support-amount-button {
+    min-height: 42px;
+    padding: 0 5px;
+    font-size: 9px;
+  }
+
+  .support-input-wrapper {
+    height: 40px;
+  }
+
+  .support-total {
+    padding: 0 10px;
+  }
+
+  .support-total span {
+    font-size: 10px;
+  }
+
+  .support-total strong {
+    font-size: 14px;
+  }
+
+  .support-payment-button {
+    min-height: 44px;
+    font-size: 11px;
+  }
+
+  .support-payment-note {
+    font-size: 8px;
+  }
+
+  .support-bank-card {
+    min-height: 60px;
+    padding: 10px;
+  }
+
+  .support-bank-logo {
+    width: 36px;
+    height: 36px;
+  }
+
+  .support-bank-account {
+    min-height: 60px;
+    padding: 0 10px;
+  }
+
+  .support-bank-account strong {
+    font-size: 11px;
+  }
+
+  .support-copy-button {
+    min-height: 32px;
+    padding: 0 8px;
+  }
+
+  .support-copy-button span {
+    display: none;
+  }
+
+  .support-bank-holder {
+    min-height: 54px;
+    padding: 0 10px;
+  }
+
+  .support-bank-note {
+    padding: 10px;
+  }
+
+  .support-bank-note p {
+    font-size: 9px;
+  }
+
+  .support-footer-card {
+    min-height: 62px;
+    padding: 10px;
+  }
+
+  .support-footer-icon {
+    width: 34px;
+    height: 34px;
+  }
+
+  .support-footer-card strong {
+    font-size: 10px;
+  }
+
+  .support-footer-card p {
+    font-size: 8px;
+  }
+}

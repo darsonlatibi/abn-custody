@@ -1,0 +1,236 @@
+/* =========================================================
+   ABN CORPORATE WEBSITE
+   GLOBAL CSS
+   LIGHT / DARK THEME
+   ========================================================= */
+
+/* =========================================================
+   THEME
+   ========================================================= */
+
+:root {
+  font-family: "Inter", "Segoe UI", Roboto, Arial, sans-serif;
+
+  font-synthesis: none;
+
+  text-rendering: optimizeLegibility;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  color: var(--text-primary);
+  background: var(--bg-app);
+}
+
+/* =========================================================
+   DARK THEME
+   ========================================================= */
+
+html[data-theme="dark"] {
+  color-scheme: dark;
+}
+
+/* =========================================================
+   RESET
+   ========================================================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   HTML / BODY / ROOT
+   ========================================================= */
+
+html,
+body,
+#root {
+  width: 100%;
+  min-width: 0;
+
+  min-height: 100%;
+  min-height: 100vh;
+  min-height: 100dvh;
+
+  margin: 0;
+  padding: 0;
+}
+
+/* =========================================================
+   BODY
+   ========================================================= */
+
+body {
+  margin: 0;
+
+  background: var(--bg-app);
+
+  color: var(--text-primary);
+
+  font-family: var(--font-family);
+
+  font-size: 14px;
+  font-weight: var(--font-weight-normal);
+
+  line-height: var(--line-height-normal);
+
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+/* =========================================================
+   ROOT
+   ========================================================= */
+
+#root {
+  width: 100%;
+  max-width: none;
+
+  margin: 0;
+
+  text-align: left;
+
+  background: var(--bg-app);
+}
+
+/* =========================================================
+   ELEMENTS
+   ========================================================= */
+
+button,
+input,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a {
+  color: inherit;
+
+  text-decoration: none;
+}
+
+/* =========================================================
+   HEADINGS
+   ========================================================= */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+
+  color: var(--text-primary);
+
+  line-height: var(--line-height-tight);
+}
+
+/* =========================================================
+   PARAGRAPH
+   ========================================================= */
+
+p {
+  margin-top: 0;
+
+  color: var(--text-secondary);
+}
+
+/* =========================================================
+   IMAGES
+   ========================================================= */
+
+img,
+svg {
+  max-width: 100%;
+}
+
+/* =========================================================
+   FORM
+   ========================================================= */
+
+input,
+textarea,
+select {
+  color: var(--text-primary);
+
+  background: var(--bg-surface);
+
+  border-color: var(--border-color);
+}
+
+/* =========================================================
+   SELECTION
+   ========================================================= */
+
+::selection {
+  background: var(--brand-soft);
+
+  color: var(--text-primary);
+}
+
+/* =========================================================
+   SCROLLBAR
+   ========================================================= */
+
+html {
+  scrollbar-width: thin;
+
+  scrollbar-color: var(--border-color) transparent;
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
+
+/* =========================================================
+   FOCUS
+   ========================================================= */
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid var(--brand-primary);
+
+  outline-offset: 3px;
+}
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  body {
+    transition: none;
+  }
+}

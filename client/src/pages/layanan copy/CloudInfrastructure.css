@@ -1,0 +1,1435 @@
+/* =========================================================
+   ABN INDUSTRY 4.0
+   CLOUD INFRASTRUCTURE
+   ========================================================= */
+
+.cloud-page {
+  width: 100%;
+  min-height: 100%;
+  color: #10201f;
+  background: #f7faf9;
+  overflow: hidden;
+}
+
+.cloud-container {
+  width: min(1180px, calc(100% - 48px));
+  margin: 0 auto;
+}
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.cloud-hero {
+  position: relative;
+  min-height: 650px;
+  display: flex;
+  align-items: center;
+  background:
+    radial-gradient(
+      circle at 75% 30%,
+      rgba(20, 184, 166, 0.16),
+      transparent 32%
+    ),
+    radial-gradient(
+      circle at 15% 70%,
+      rgba(15, 118, 110, 0.08),
+      transparent 30%
+    ),
+    #f4f8f7;
+  border-bottom: 1px solid rgba(15, 118, 110, 0.12);
+}
+
+.cloud-hero-grid {
+  position: absolute;
+  inset: 0;
+  opacity: 0.4;
+  pointer-events: none;
+
+  background-image:
+    linear-gradient(rgba(15, 118, 110, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(15, 118, 110, 0.055) 1px, transparent 1px);
+
+  background-size: 42px 42px;
+
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 20%,
+    black 80%,
+    transparent
+  );
+}
+
+.cloud-hero-inner {
+  position: relative;
+  z-index: 2;
+
+  min-height: 650px;
+
+  display: grid;
+  grid-template-columns: 1.02fr 0.98fr;
+  gap: 70px;
+  align-items: center;
+}
+
+.cloud-hero-content {
+  max-width: 650px;
+}
+
+.cloud-eyebrow {
+  width: fit-content;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 8px 12px;
+
+  border: 1px solid rgba(15, 118, 110, 0.2);
+  border-radius: 999px;
+
+  background: rgba(255, 255, 255, 0.7);
+
+  color: #0f766e;
+
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+}
+
+.cloud-hero h1 {
+  margin: 22px 0 22px;
+
+  max-width: 680px;
+
+  font-size: clamp(44px, 5vw, 72px);
+  line-height: 0.98;
+  letter-spacing: -0.055em;
+
+  color: #10201f;
+}
+
+.cloud-hero h1 span {
+  display: block;
+  color: #0f766e;
+}
+
+.cloud-hero p {
+  max-width: 610px;
+
+  margin: 0;
+
+  color: #61716f;
+
+  font-size: 17px;
+  line-height: 1.75;
+}
+
+.cloud-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+
+  margin-top: 32px;
+}
+
+.cloud-btn {
+  min-height: 46px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+
+  padding: 0 18px;
+
+  border-radius: 8px;
+
+  font: inherit;
+  font-size: 13px;
+  font-weight: 750;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.cloud-btn:hover {
+  transform: translateY(-2px);
+}
+
+.cloud-btn-primary {
+  border: 1px solid #0f766e;
+  background: #0f766e;
+  color: #ffffff;
+
+  box-shadow: 0 12px 28px rgba(15, 118, 110, 0.18);
+}
+
+.cloud-btn-primary:hover {
+  background: #115e59;
+}
+
+.cloud-btn-secondary {
+  border: 1px solid rgba(15, 118, 110, 0.22);
+  background: rgba(255, 255, 255, 0.75);
+  color: #174b47;
+}
+
+.cloud-btn-secondary:hover {
+  background: #ffffff;
+}
+
+.cloud-hero-points {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+
+  margin-top: 28px;
+}
+
+.cloud-hero-points div {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  color: #536663;
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.cloud-hero-points svg {
+  color: #0f766e;
+}
+
+/* =========================================================
+   HERO VISUAL
+   ========================================================= */
+
+.cloud-hero-visual {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.cloud-core-card {
+  width: min(100%, 500px);
+
+  border: 1px solid rgba(15, 118, 110, 0.2);
+  border-radius: 18px;
+
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.96),
+    rgba(239, 247, 245, 0.96)
+  );
+
+  box-shadow:
+    0 30px 80px rgba(15, 70, 65, 0.12),
+    0 10px 25px rgba(15, 70, 65, 0.06);
+
+  overflow: hidden;
+}
+
+.cloud-core-header {
+  height: 54px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 20px;
+
+  border-bottom: 1px solid rgba(15, 118, 110, 0.12);
+
+  color: #49605d;
+
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.cloud-core-header > div {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.cloud-core-header > svg {
+  color: #0f766e;
+}
+
+.cloud-status-dot {
+  width: 8px;
+  height: 8px;
+
+  display: inline-block;
+
+  border-radius: 50%;
+
+  background: #14b8a6;
+
+  box-shadow: 0 0 0 5px rgba(20, 184, 166, 0.1);
+}
+
+.cloud-core-body {
+  padding: 28px 24px 24px;
+}
+
+.cloud-core-title {
+  color: #71817f;
+
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+
+  margin-bottom: 24px;
+}
+
+.cloud-core-flow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+}
+
+.cloud-flow-node {
+  width: 96px;
+  min-height: 90px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+
+  border: 1px solid rgba(15, 118, 110, 0.15);
+  border-radius: 12px;
+
+  background: rgba(255, 255, 255, 0.72);
+
+  color: #526663;
+
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.cloud-flow-node svg {
+  color: #0f766e;
+}
+
+.cloud-flow-main {
+  border-color: rgba(15, 118, 110, 0.3);
+
+  background: rgba(15, 118, 110, 0.08);
+
+  color: #0f766e;
+}
+
+.cloud-flow-line {
+  width: 34px;
+  height: 1px;
+
+  background: rgba(15, 118, 110, 0.25);
+}
+
+.cloud-code-panel {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+
+  margin-top: 28px;
+
+  overflow: hidden;
+
+  border: 1px solid rgba(15, 118, 110, 0.1);
+  border-radius: 10px;
+
+  background: rgba(15, 118, 110, 0.1);
+}
+
+.cloud-code-panel div {
+  min-height: 58px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+
+  padding: 10px 14px;
+
+  background: rgba(248, 252, 251, 0.9);
+}
+
+.cloud-code-panel span {
+  color: #7a8987;
+
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+.cloud-code-panel strong {
+  color: #0f766e;
+
+  font-size: 12px;
+  letter-spacing: 0.05em;
+}
+
+.cloud-core-footer {
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 20px;
+
+  border-top: 1px solid rgba(15, 118, 110, 0.1);
+
+  color: #7a8987;
+
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+/* =========================================================
+   SECTION
+   ========================================================= */
+
+.cloud-section {
+  padding: 100px 0;
+}
+
+.cloud-section-heading {
+  max-width: 750px;
+
+  margin-bottom: 48px;
+}
+
+.cloud-section-label {
+  display: inline-block;
+
+  margin-bottom: 14px;
+
+  color: #0f766e;
+
+  font-size: 10px;
+  font-weight: 850;
+  letter-spacing: 0.18em;
+}
+
+.cloud-section-heading h2,
+.cloud-tech-content h2 {
+  margin: 0;
+
+  color: #122321;
+
+  font-size: clamp(32px, 4vw, 48px);
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+}
+
+.cloud-section-heading h2 span,
+.cloud-tech-content h2 span {
+  color: #0f766e;
+}
+
+.cloud-section-heading p,
+.cloud-tech-content p {
+  max-width: 700px;
+
+  margin: 18px 0 0;
+
+  color: #647471;
+
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+/* =========================================================
+   CAPABILITY
+   ========================================================= */
+
+.cloud-capability {
+  background: #ffffff;
+}
+
+.cloud-capability-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.cloud-capability-card {
+  padding: 24px;
+
+  border: 1px solid rgba(15, 118, 110, 0.12);
+  border-radius: 12px;
+
+  background: #fbfdfc;
+
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.cloud-capability-card:hover {
+  transform: translateY(-4px);
+
+  border-color: rgba(15, 118, 110, 0.28);
+
+  box-shadow: 0 18px 45px rgba(15, 80, 74, 0.08);
+}
+
+.cloud-icon-box {
+  width: 46px;
+  height: 46px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(15, 118, 110, 0.15);
+  border-radius: 10px;
+
+  background: rgba(15, 118, 110, 0.07);
+
+  color: #0f766e;
+}
+
+.cloud-capability-card h3 {
+  margin: 22px 0 9px;
+
+  color: #1b302d;
+
+  font-size: 17px;
+}
+
+.cloud-capability-card p {
+  margin: 0;
+
+  color: #70807d;
+
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+/* =========================================================
+   SERVICES
+   ========================================================= */
+
+.cloud-services {
+  background:
+    radial-gradient(
+      circle at 85% 20%,
+      rgba(20, 184, 166, 0.08),
+      transparent 30%
+    ),
+    #f5f9f8;
+}
+
+.cloud-services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.cloud-service-card {
+  min-height: 300px;
+
+  padding: 26px;
+
+  border: 1px solid rgba(15, 118, 110, 0.12);
+  border-radius: 14px;
+
+  background: rgba(255, 255, 255, 0.82);
+
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.cloud-service-card:hover {
+  transform: translateY(-4px);
+
+  border-color: rgba(15, 118, 110, 0.28);
+
+  box-shadow: 0 20px 50px rgba(15, 80, 74, 0.08);
+}
+
+.cloud-service-icon {
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+
+  background: #0f766e;
+  color: #ffffff;
+}
+
+.cloud-service-card h3 {
+  margin: 20px 0 10px;
+
+  color: #1a302d;
+
+  font-size: 18px;
+}
+
+.cloud-service-card > p {
+  margin: 0;
+
+  color: #6d7c79;
+
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+.cloud-feature-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+
+  margin-top: 22px;
+  padding-top: 18px;
+
+  border-top: 1px solid rgba(15, 118, 110, 0.1);
+}
+
+.cloud-feature-list div {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  color: #5f716d;
+
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.cloud-feature-list svg {
+  flex-shrink: 0;
+  color: #0f766e;
+}
+
+/* =========================================================
+   SOLUTIONS
+   ========================================================= */
+
+.cloud-solutions {
+  background: #ffffff;
+}
+
+.cloud-solutions-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.cloud-solution-card {
+  padding: 24px;
+
+  border: 1px solid rgba(15, 118, 110, 0.12);
+  border-radius: 13px;
+
+  background: #fbfdfc;
+
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.cloud-solution-card:hover {
+  transform: translateY(-4px);
+
+  border-color: rgba(15, 118, 110, 0.28);
+}
+
+.cloud-solution-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cloud-solution-top > svg {
+  color: #9aaba8;
+}
+
+.cloud-solution-card h3 {
+  margin: 22px 0 9px;
+
+  color: #1a302d;
+
+  font-size: 17px;
+}
+
+.cloud-solution-card p {
+  margin: 0;
+
+  color: #6f7e7b;
+
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+/* =========================================================
+   ARCHITECTURE
+   ========================================================= */
+
+.cloud-architecture {
+  background:
+    radial-gradient(
+      circle at 15% 50%,
+      rgba(20, 184, 166, 0.08),
+      transparent 30%
+    ),
+    #f5f9f8;
+}
+
+.cloud-architecture-card {
+  padding: 38px 30px;
+
+  border: 1px solid rgba(15, 118, 110, 0.14);
+  border-radius: 16px;
+
+  background: rgba(255, 255, 255, 0.78);
+
+  overflow-x: auto;
+}
+
+.cloud-architecture-flow {
+  min-width: 950px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 15px;
+}
+
+.cloud-architecture-node {
+  width: 145px;
+  min-height: 170px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 22px 12px;
+
+  border: 1px solid rgba(15, 118, 110, 0.14);
+  border-radius: 13px;
+
+  background: #ffffff;
+
+  text-align: center;
+}
+
+.cloud-architecture-node svg {
+  margin-bottom: 15px;
+
+  color: #0f766e;
+}
+
+.cloud-architecture-node strong {
+  color: #31514c;
+
+  font-size: 10px;
+  letter-spacing: 0.1em;
+}
+
+.cloud-architecture-node span {
+  margin-top: 13px;
+
+  color: #778784;
+
+  font-size: 10px;
+  line-height: 1.7;
+}
+
+.cloud-architecture-cloud {
+  border-color: rgba(15, 118, 110, 0.3);
+
+  background: rgba(15, 118, 110, 0.06);
+}
+
+.cloud-architecture-arrow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+
+  color: #0f766e;
+}
+
+.cloud-architecture-arrow span {
+  white-space: nowrap;
+
+  color: #81908e;
+
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+}
+
+/* =========================================================
+   TECHNOLOGY
+   ========================================================= */
+
+.cloud-technology {
+  background: #ffffff;
+}
+
+.cloud-tech-layout {
+  display: grid;
+  grid-template-columns: 1fr 0.9fr;
+  gap: 70px;
+  align-items: center;
+}
+
+.cloud-tech-content {
+  max-width: 650px;
+}
+
+.cloud-tech-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+
+  margin-top: 28px;
+}
+
+.cloud-tech-list span {
+  padding: 8px 11px;
+
+  border: 1px solid rgba(15, 118, 110, 0.14);
+  border-radius: 7px;
+
+  background: #f6faf9;
+
+  color: #536864;
+
+  font-size: 10px;
+  font-weight: 750;
+}
+
+.cloud-terminal {
+  border: 1px solid rgba(15, 118, 110, 0.22);
+  border-radius: 14px;
+
+  background: #10201f;
+
+  box-shadow: 0 24px 55px rgba(15, 60, 56, 0.14);
+
+  overflow: hidden;
+}
+
+.cloud-terminal-header {
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 16px;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+  color: #a9bfbb;
+
+  font-family: monospace;
+  font-size: 10px;
+}
+
+.cloud-terminal-header > svg {
+  color: #5eead4;
+}
+
+.cloud-terminal-dots {
+  display: flex;
+  gap: 5px;
+}
+
+.cloud-terminal-dots span {
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.22);
+}
+
+.cloud-terminal-body {
+  padding: 24px;
+
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 11px;
+}
+
+.cloud-terminal-body > div {
+  display: flex;
+  gap: 9px;
+
+  color: #d5e4e1;
+}
+
+.cloud-terminal-command {
+  color: #5eead4;
+}
+
+.cloud-terminal-body p {
+  margin: 10px 0 0;
+  padding-left: 16px;
+
+  color: #7fa29c;
+
+  line-height: 1.5;
+}
+
+.cloud-terminal-success {
+  color: #5eead4 !important;
+}
+
+.cloud-terminal-divider {
+  height: 1px;
+
+  margin: 20px 0;
+
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* =========================================================
+   OPERATIONS
+   ========================================================= */
+
+.cloud-operations {
+  background:
+    radial-gradient(
+      circle at 80% 50%,
+      rgba(20, 184, 166, 0.08),
+      transparent 30%
+    ),
+    #f5f9f8;
+}
+
+.cloud-operations-card {
+  border: 1px solid rgba(15, 118, 110, 0.14);
+  border-radius: 16px;
+
+  background: rgba(255, 255, 255, 0.82);
+
+  overflow: hidden;
+}
+
+.cloud-operation-header {
+  min-height: 56px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 22px;
+
+  border-bottom: 1px solid rgba(15, 118, 110, 0.1);
+
+  color: #7a8987;
+
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.cloud-operation-header > div {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  color: #3b5651;
+}
+
+.cloud-operation-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.cloud-operation-item {
+  min-height: 145px;
+
+  padding: 22px;
+
+  border-right: 1px solid rgba(15, 118, 110, 0.08);
+  border-bottom: 1px solid rgba(15, 118, 110, 0.08);
+}
+
+.cloud-operation-item:nth-child(3n) {
+  border-right: 0;
+}
+
+.cloud-operation-item:nth-last-child(-n + 3) {
+  border-bottom: 0;
+}
+
+.cloud-operation-item > div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  color: #778784;
+
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+}
+
+.cloud-operation-item > div svg {
+  color: #0f766e;
+}
+
+.cloud-operation-item strong {
+  display: block;
+
+  margin-top: 15px;
+
+  color: #17312d;
+
+  font-size: 21px;
+  letter-spacing: -0.02em;
+}
+
+.cloud-operation-item small {
+  display: block;
+
+  margin-top: 5px;
+
+  color: #0f766e;
+
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+/* =========================================================
+   CTA
+   ========================================================= */
+
+.cloud-cta {
+  padding: 80px 0 100px;
+
+  background: #ffffff;
+}
+
+.cloud-cta-card {
+  position: relative;
+
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 25px;
+
+  padding: 38px 42px;
+
+  border: 1px solid rgba(15, 118, 110, 0.16);
+  border-radius: 16px;
+
+  background:
+    radial-gradient(
+      circle at 85% 20%,
+      rgba(20, 184, 166, 0.12),
+      transparent 30%
+    ),
+    #f4f9f8;
+}
+
+.cloud-cta-icon {
+  width: 62px;
+  height: 62px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 14px;
+
+  background: #0f766e;
+  color: #ffffff;
+
+  box-shadow: 0 12px 25px rgba(15, 118, 110, 0.2);
+}
+
+.cloud-cta-content > span {
+  color: #0f766e;
+
+  font-size: 9px;
+  font-weight: 850;
+  letter-spacing: 0.17em;
+}
+
+.cloud-cta-content h2 {
+  margin: 8px 0 8px;
+
+  color: #17302c;
+
+  font-size: clamp(24px, 3vw, 36px);
+  line-height: 1.05;
+  letter-spacing: -0.035em;
+}
+
+.cloud-cta-content h2 span {
+  color: #0f766e;
+}
+
+.cloud-cta-content p {
+  margin: 0;
+
+  color: #6c7b78;
+
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* =========================================================
+   DARK MODE
+   ========================================================= */
+
+[data-theme="dark"] .cloud-page {
+  color: #dce9e7;
+  background: #081312;
+}
+
+[data-theme="dark"] .cloud-hero {
+  background:
+    radial-gradient(
+      circle at 75% 30%,
+      rgba(20, 184, 166, 0.13),
+      transparent 32%
+    ),
+    #081312;
+}
+
+[data-theme="dark"] .cloud-hero h1 {
+  color: #e7f2f0;
+}
+
+[data-theme="dark"] .cloud-hero p {
+  color: #9cafab;
+}
+
+[data-theme="dark"] .cloud-eyebrow,
+[data-theme="dark"] .cloud-btn-secondary {
+  background: rgba(255, 255, 255, 0.035);
+}
+
+[data-theme="dark"] .cloud-btn-secondary {
+  color: #b9ceca;
+  border-color: rgba(94, 234, 212, 0.18);
+}
+
+[data-theme="dark"] .cloud-core-card,
+[data-theme="dark"] .cloud-capability-card,
+[data-theme="dark"] .cloud-service-card,
+[data-theme="dark"] .cloud-solution-card,
+[data-theme="dark"] .cloud-architecture-card,
+[data-theme="dark"] .cloud-terminal,
+[data-theme="dark"] .cloud-operations-card {
+  background: #0d1b1a;
+}
+
+[data-theme="dark"] .cloud-core-card {
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.28);
+}
+
+[data-theme="dark"] .cloud-core-header,
+[data-theme="dark"] .cloud-core-footer,
+[data-theme="dark"] .cloud-section-heading p,
+[data-theme="dark"] .cloud-tech-content p,
+[data-theme="dark"] .cloud-capability-card p,
+[data-theme="dark"] .cloud-service-card > p,
+[data-theme="dark"] .cloud-solution-card p {
+  color: #8ea39f;
+}
+
+[data-theme="dark"] .cloud-section-heading h2,
+[data-theme="dark"] .cloud-tech-content h2 {
+  color: #e5f0ee;
+}
+
+[data-theme="dark"] .cloud-capability,
+[data-theme="dark"] .cloud-solutions,
+[data-theme="dark"] .cloud-technology,
+[data-theme="dark"] .cloud-cta {
+  background: #081312;
+}
+
+[data-theme="dark"] .cloud-services,
+[data-theme="dark"] .cloud-architecture,
+[data-theme="dark"] .cloud-operations {
+  background: #0a1716;
+}
+
+[data-theme="dark"] .cloud-capability-card,
+[data-theme="dark"] .cloud-service-card,
+[data-theme="dark"] .cloud-solution-card,
+[data-theme="dark"] .cloud-architecture-card,
+[data-theme="dark"] .cloud-architecture-node {
+  border-color: rgba(94, 234, 212, 0.11);
+}
+
+[data-theme="dark"] .cloud-capability-card h3,
+[data-theme="dark"] .cloud-service-card h3,
+[data-theme="dark"] .cloud-solution-card h3,
+[data-theme="dark"] .cloud-architecture-node strong {
+  color: #cfe1de;
+}
+
+[data-theme="dark"] .cloud-architecture-node {
+  background: #0e1e1c;
+}
+
+[data-theme="dark"] .cloud-feature-list div,
+[data-theme="dark"] .cloud-hero-points div {
+  color: #91a7a3;
+}
+
+[data-theme="dark"] .cloud-tech-list span {
+  background: #0d1c1b;
+  border-color: rgba(94, 234, 212, 0.11);
+  color: #9db1ad;
+}
+
+[data-theme="dark"] .cloud-operation-header,
+[data-theme="dark"] .cloud-operation-item > div,
+[data-theme="dark"] .cloud-operation-item small {
+  color: #8ea39f;
+}
+
+[data-theme="dark"] .cloud-operation-item strong {
+  color: #dceae7;
+}
+
+[data-theme="dark"] .cloud-cta-card {
+  background:
+    radial-gradient(
+      circle at 85% 20%,
+      rgba(20, 184, 166, 0.1),
+      transparent 30%
+    ),
+    #0d1b1a;
+}
+
+[data-theme="dark"] .cloud-cta-content h2 {
+  color: #dceae7;
+}
+
+/* =========================================================
+   RESPONSIVE — 1100px
+   ========================================================= */
+
+@media (max-width: 1100px) {
+  .cloud-hero-inner {
+    grid-template-columns: 1fr;
+    gap: 50px;
+
+    padding-top: 90px;
+    padding-bottom: 90px;
+  }
+
+  .cloud-hero-content {
+    max-width: 760px;
+  }
+
+  .cloud-hero-visual {
+    justify-content: flex-start;
+  }
+
+  .cloud-core-card {
+    width: 560px;
+  }
+
+  .cloud-capability-grid,
+  .cloud-solutions-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cloud-services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cloud-tech-layout {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+}
+
+/* =========================================================
+   RESPONSIVE — 900px
+   ========================================================= */
+
+@media (max-width: 900px) {
+  .cloud-section {
+    padding: 80px 0;
+  }
+
+  .cloud-operation-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cloud-operation-item:nth-child(3n) {
+    border-right: 1px solid rgba(15, 118, 110, 0.08);
+  }
+
+  .cloud-operation-item:nth-child(2n) {
+    border-right: 0;
+  }
+
+  .cloud-operation-item:nth-last-child(-n + 3) {
+    border-bottom: 1px solid rgba(15, 118, 110, 0.08);
+  }
+
+  .cloud-operation-item:nth-last-child(-n + 2) {
+    border-bottom: 0;
+  }
+
+  .cloud-cta-card {
+    grid-template-columns: auto 1fr;
+  }
+
+  .cloud-cta-card .cloud-btn {
+    grid-column: 1 / -1;
+    justify-self: start;
+  }
+}
+
+/* =========================================================
+   RESPONSIVE — 640px
+   ========================================================= */
+
+@media (max-width: 640px) {
+  .cloud-container {
+    width: min(100% - 30px, 1180px);
+  }
+
+  .cloud-hero {
+    min-height: auto;
+  }
+
+  .cloud-hero-inner {
+    min-height: auto;
+
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  .cloud-hero h1 {
+    font-size: 43px;
+  }
+
+  .cloud-hero p {
+    font-size: 15px;
+  }
+
+  .cloud-hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .cloud-btn {
+    width: 100%;
+  }
+
+  .cloud-hero-points {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 11px;
+  }
+
+  .cloud-core-card {
+    width: 100%;
+  }
+
+  .cloud-core-body {
+    padding: 22px 16px;
+  }
+
+  .cloud-flow-node {
+    width: 78px;
+    min-height: 78px;
+
+    font-size: 8px;
+  }
+
+  .cloud-flow-line {
+    width: 18px;
+  }
+
+  .cloud-section {
+    padding: 70px 0;
+  }
+
+  .cloud-section-heading {
+    margin-bottom: 34px;
+  }
+
+  .cloud-section-heading h2,
+  .cloud-tech-content h2 {
+    font-size: 34px;
+  }
+
+  .cloud-capability-grid,
+  .cloud-services-grid,
+  .cloud-solutions-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cloud-service-card {
+    min-height: auto;
+  }
+
+  .cloud-feature-list {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .cloud-architecture-card {
+    padding: 25px 18px;
+  }
+
+  .cloud-operation-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cloud-operation-item,
+  .cloud-operation-item:nth-child(2n),
+  .cloud-operation-item:nth-child(3n) {
+    border-right: 0;
+    border-bottom: 1px solid rgba(15, 118, 110, 0.08);
+  }
+
+  .cloud-operation-item:last-child {
+    border-bottom: 0;
+  }
+
+  .cloud-cta {
+    padding: 60px 0 70px;
+  }
+
+  .cloud-cta-card {
+    grid-template-columns: 1fr;
+    padding: 28px 24px;
+  }
+
+  .cloud-cta-card .cloud-btn {
+    grid-column: auto;
+  }
+}

@@ -1,0 +1,999 @@
+/* =========================================================
+ABN HR PAGE
+Enterprise Human Resources Management
+Design system aligned with Finance / About / Home
+========================================================= */
+
+.hr-page {
+  width: 100%;
+  min-height: 100%;
+  padding: 32px 0 60px;
+  color: var(--text-primary, #172033);
+  background: var(--background-primary, #ffffff);
+  overflow: hidden;
+}
+
+.hr-page,
+.hr-page * {
+  box-sizing: border-box;
+}
+
+/* =========================================================
+HEADER
+========================================================= */
+
+.hr-header {
+  width: min(1180px, calc(100% - 48px));
+  margin: 0 auto 30px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+.hr-header h1 {
+  margin: 0 0 8px;
+  color: var(--text-primary, #172033);
+  font-size: clamp(32px, 4vw, 44px);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+}
+
+.hr-header p {
+  margin: 0;
+  color: var(--text-secondary, #64748b);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.hr-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* =========================================================
+BUTTONS
+========================================================= */
+
+.hr-btn {
+  min-height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0 16px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 750;
+  line-height: 1;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.hr-btn:hover {
+  transform: translateY(-2px);
+}
+
+.hr-btn-primary {
+  color: #ffffff;
+  background: #0f766e;
+  box-shadow: 0 10px 25px rgba(15, 118, 110, 0.18);
+}
+
+.hr-btn-primary:hover {
+  background: #115e59;
+  box-shadow: 0 14px 30px rgba(15, 118, 110, 0.24);
+}
+
+.hr-btn-secondary {
+  color: var(--text-primary, #172033);
+  background: var(--surface-primary, #ffffff);
+  border-color: var(--border-color, #dbe3ea);
+}
+
+.hr-btn-secondary:hover {
+  color: #0f766e;
+  border-color: rgba(15, 118, 110, 0.3);
+}
+
+/* =========================================================
+COMMON CARD
+========================================================= */
+
+.hr-card {
+  border: 1px solid var(--border-color, #e2e8f0);
+  border-radius: 16px;
+  background: var(--surface-primary, #ffffff);
+  box-shadow: 0 15px 40px rgba(15, 23, 42, 0.045);
+}
+
+/* =========================================================
+SUMMARY
+========================================================= */
+
+.hr-summary-grid {
+  width: min(1180px, calc(100% - 48px));
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.summary-card {
+  min-height: 155px;
+  padding: 21px;
+  transition:
+    transform 0.22s ease,
+    border-color 0.22s ease,
+    box-shadow 0.22s ease;
+}
+
+.summary-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(15, 118, 110, 0.2);
+  box-shadow: 0 20px 45px rgba(15, 23, 42, 0.07);
+}
+
+.summary-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  color: var(--text-secondary, #64748b);
+  font-size: 11px;
+  font-weight: 750;
+  letter-spacing: 0.02em;
+}
+
+.summary-icon {
+  width: 39px;
+  height: 39px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(15, 118, 110, 0.12);
+  border-radius: 11px;
+  color: #0f766e;
+  background: rgba(15, 118, 110, 0.06);
+}
+
+.summary-value {
+  margin-top: 18px;
+  color: var(--text-primary, #172033);
+  font-size: clamp(24px, 2vw, 29px);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+}
+
+.summary-change {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 13px;
+  font-size: 11px;
+  font-weight: 750;
+}
+
+.summary-change.positive {
+  color: #0f766e;
+}
+
+.summary-change.negative {
+  color: #dc2626;
+}
+
+.summary-change small {
+  margin-left: 3px;
+  color: var(--text-secondary, #94a3b8);
+  font-size: 10px;
+  font-weight: 550;
+}
+
+/* =========================================================
+MAIN GRID
+========================================================= */
+
+.hr-main-grid {
+  width: min(1180px, calc(100% - 48px));
+  margin: 18px auto 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1.55fr) minmax(320px, 0.85fr);
+  gap: 18px;
+}
+
+/* =========================================================
+CARD HEADER
+========================================================= */
+
+.hr-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.hr-card-header h2 {
+  margin: 0 0 5px;
+  color: var(--text-primary, #172033);
+  font-size: 17px;
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.hr-card-header p {
+  margin: 0;
+  color: var(--text-secondary, #64748b);
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.attendance-card,
+.department-card {
+  min-height: 390px;
+  padding: 23px;
+}
+
+.attendance-card .hr-card-header > svg,
+.department-card .hr-card-header > svg {
+  color: #0f766e;
+}
+
+/* =========================================================
+ATTENDANCE
+========================================================= */
+
+.attendance-overview {
+  min-height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  margin-top: 20px;
+  padding: 5px 10px;
+}
+
+.attendance-total {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.attendance-total strong {
+  color: var(--text-primary, #172033);
+  font-size: 34px;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.035em;
+}
+
+.attendance-total span {
+  color: var(--text-secondary, #64748b);
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.attendance-ring {
+  width: 128px;
+  height: 128px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  background: conic-gradient(
+    #0f766e 0deg,
+    #14b8a6 334deg,
+    var(--border-color, #e2e8f0) 334deg,
+    var(--border-color, #e2e8f0) 360deg
+  );
+}
+
+.attendance-ring-inner {
+  width: 94px;
+  height: 94px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 50%;
+  background: var(--surface-primary, #ffffff);
+}
+
+.attendance-ring-inner strong {
+  color: var(--text-primary, #172033);
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.attendance-ring-inner span {
+  margin-top: 5px;
+  color: var(--text-secondary, #64748b);
+  font-size: 9px;
+  font-weight: 650;
+}
+
+.attendance-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-top: 5px;
+}
+
+.attendance-stat {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px;
+  border: 1px solid var(--border-color, #e2e8f0);
+  border-radius: 10px;
+  background: var(--surface-secondary, #f8fafc);
+}
+
+.attendance-dot {
+  width: 7px;
+  height: 7px;
+  flex: 0 0 auto;
+  border-radius: 50%;
+}
+
+.attendance-dot.present {
+  background: #0f766e;
+}
+
+.attendance-dot.leave {
+  background: #f59e0b;
+}
+
+.attendance-dot.absent {
+  background: #dc2626;
+}
+
+.attendance-stat div {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.attendance-stat strong {
+  color: var(--text-primary, #172033);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.attendance-stat small {
+  color: var(--text-secondary, #64748b);
+  font-size: 9px;
+}
+
+.attendance-progress {
+  width: 100%;
+  height: 7px;
+  margin-top: 18px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: var(--surface-secondary, #f1f5f9);
+}
+
+.attendance-progress span {
+  height: 100%;
+  display: block;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #0f766e, #14b8a6);
+}
+
+.attendance-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 7px;
+}
+
+.attendance-footer span {
+  color: var(--text-secondary, #94a3b8);
+  font-size: 9px;
+  font-weight: 600;
+}
+
+.attendance-footer strong {
+  color: var(--text-primary, #172033);
+  font-size: 10px;
+  font-weight: 800;
+}
+
+/* =========================================================
+DEPARTMENTS
+========================================================= */
+
+.department-card {
+  min-height: 390px;
+}
+
+.department-total {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 27px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--border-color, #e2e8f0);
+}
+
+.department-total strong {
+  color: var(--text-primary, #172033);
+  font-size: 25px;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+}
+
+.department-total span {
+  color: var(--text-secondary, #64748b);
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.department-list {
+  display: grid;
+  gap: 15px;
+  margin-top: 19px;
+}
+
+.department-item-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 7px;
+}
+
+.department-item-top span {
+  color: var(--text-secondary, #64748b);
+  font-size: 10px;
+  font-weight: 650;
+}
+
+.department-item-top strong {
+  color: var(--text-primary, #172033);
+  font-size: 10px;
+  font-weight: 750;
+}
+
+.department-progress {
+  width: 100%;
+  height: 6px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: var(--surface-secondary, #f1f5f9);
+}
+
+.department-progress span {
+  height: 100%;
+  display: block;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #0f766e, #14b8a6);
+}
+
+.department-item small {
+  display: block;
+  margin-top: 4px;
+  color: var(--text-secondary, #94a3b8);
+  font-size: 9px;
+  font-weight: 650;
+  text-align: right;
+}
+
+/* =========================================================
+EMPLOYEES
+========================================================= */
+
+.employees-card {
+  width: min(1180px, calc(100% - 48px));
+  margin: 18px auto 0;
+  padding: 23px;
+}
+
+.hr-link-btn {
+  border: 0;
+  color: #0f766e;
+  background: transparent;
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 750;
+  cursor: pointer;
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.hr-link-btn:hover {
+  color: #115e59;
+  transform: translateX(2px);
+}
+
+.employee-table-wrapper {
+  width: 100%;
+  margin-top: 20px;
+  overflow-x: auto;
+}
+
+.employee-table {
+  width: 100%;
+  min-width: 780px;
+  border-collapse: collapse;
+}
+
+.employee-table th {
+  padding: 11px 12px;
+  border-bottom: 1px solid var(--border-color, #e2e8f0);
+  color: var(--text-secondary, #94a3b8);
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.employee-table td {
+  padding: 13px 12px;
+  border-bottom: 1px solid var(--border-color, #eef2f7);
+  color: var(--text-secondary, #64748b);
+  font-size: 11px;
+  white-space: nowrap;
+}
+
+.employee-table tbody tr {
+  transition: background 0.2s ease;
+}
+
+.employee-table tbody tr:hover {
+  background: rgba(15, 118, 110, 0.025);
+}
+
+.employee-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.employee-table td:first-child strong {
+  color: var(--text-primary, #172033);
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.employee-description {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--text-primary, #172033);
+  font-weight: 650;
+}
+
+.employee-avatar {
+  width: 31px;
+  height: 31px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  border-radius: 9px;
+  color: #0f766e;
+  background: rgba(15, 118, 110, 0.07);
+}
+
+.employee-status {
+  display: inline-flex;
+  align-items: center;
+  min-height: 24px;
+  padding: 0 9px;
+  border-radius: 999px;
+  font-size: 9px;
+  font-weight: 800;
+}
+
+.employee-status.active {
+  color: #0f766e;
+  background: rgba(15, 118, 110, 0.08);
+}
+
+.employee-status.probation {
+  color: #b45309;
+  background: rgba(245, 158, 11, 0.1);
+}
+
+/* =========================================================
+QUICK ACTIONS
+========================================================= */
+
+.hr-quick-grid {
+  width: min(1180px, calc(100% - 48px));
+  margin: 18px auto 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.hr-quick-card {
+  min-height: 86px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 18px;
+  border: 1px solid var(--border-color, #e2e8f0);
+  border-radius: 14px;
+  color: var(--text-primary, #172033);
+  background: var(--surface-primary, #ffffff);
+  font-family: inherit;
+  text-align: left;
+  cursor: pointer;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.035);
+  transition:
+    transform 0.22s ease,
+    border-color 0.22s ease,
+    box-shadow 0.22s ease,
+    background 0.22s ease;
+}
+
+.hr-quick-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(15, 118, 110, 0.22);
+  background: rgba(15, 118, 110, 0.025);
+  box-shadow: 0 16px 35px rgba(15, 23, 42, 0.07);
+}
+
+.hr-quick-card > svg {
+  width: 39px;
+  height: 39px;
+  flex: 0 0 auto;
+  padding: 9px;
+  border-radius: 10px;
+  color: #0f766e;
+  background: rgba(15, 118, 110, 0.07);
+}
+
+.hr-quick-card > span {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.hr-quick-card strong {
+  color: var(--text-primary, #172033);
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.hr-quick-card small {
+  color: var(--text-secondary, #64748b);
+  font-size: 9px;
+  line-height: 1.4;
+}
+
+/* =========================================================
+DARK MODE
+========================================================= */
+
+[data-theme="dark"] .hr-page {
+  color: #f8fafc;
+  background: #0b1220;
+}
+
+[data-theme="dark"] .hr-header h1,
+[data-theme="dark"] .summary-value,
+[data-theme="dark"] .hr-card-header h2,
+[data-theme="dark"] .attendance-total strong,
+[data-theme="dark"] .attendance-ring-inner strong,
+[data-theme="dark"] .attendance-stat strong,
+[data-theme="dark"] .attendance-footer strong,
+[data-theme="dark"] .department-total strong,
+[data-theme="dark"] .department-item-top strong,
+[data-theme="dark"] .employee-table td:first-child strong,
+[data-theme="dark"] .employee-description,
+[data-theme="dark"] .hr-quick-card strong {
+  color: #f8fafc;
+}
+
+[data-theme="dark"] .hr-header p,
+[data-theme="dark"] .summary-card-top,
+[data-theme="dark"] .hr-card-header p,
+[data-theme="dark"] .summary-change small,
+[data-theme="dark"] .attendance-total span,
+[data-theme="dark"] .attendance-ring-inner span,
+[data-theme="dark"] .attendance-stat small,
+[data-theme="dark"] .attendance-footer span,
+[data-theme="dark"] .department-total span,
+[data-theme="dark"] .department-item-top span,
+[data-theme="dark"] .department-item small,
+[data-theme="dark"] .employee-table td,
+[data-theme="dark"] .hr-quick-card small {
+  color: #94a3b8;
+}
+
+/* =========================================================
+DARK - CARDS
+========================================================= */
+
+[data-theme="dark"] .hr-card,
+[data-theme="dark"] .hr-quick-card {
+  border-color: rgba(255, 255, 255, 0.08);
+  background: #111827;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.18);
+}
+
+[data-theme="dark"] .summary-card:hover,
+[data-theme="dark"] .hr-quick-card:hover {
+  border-color: rgba(94, 234, 212, 0.2);
+  background: #131d2d;
+}
+
+[data-theme="dark"] .hr-btn-secondary {
+  color: #e2e8f0;
+  background: #111827;
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .hr-btn-secondary:hover {
+  color: #5eead4;
+  border-color: rgba(94, 234, 212, 0.25);
+}
+
+/* =========================================================
+DARK - ICONS
+========================================================= */
+
+[data-theme="dark"] .summary-icon,
+[data-theme="dark"] .hr-quick-card > svg {
+  color: #5eead4;
+  background: rgba(20, 184, 166, 0.08);
+  border-color: rgba(94, 234, 212, 0.12);
+}
+
+[data-theme="dark"] .employee-avatar {
+  color: #5eead4;
+  background: rgba(20, 184, 166, 0.08);
+}
+
+/* =========================================================
+DARK - ATTENDANCE
+========================================================= */
+
+[data-theme="dark"] .attendance-ring-inner {
+  background: #111827;
+}
+
+[data-theme="dark"] .attendance-stat {
+  border-color: rgba(255, 255, 255, 0.07);
+  background: #0f172a;
+}
+
+[data-theme="dark"] .attendance-progress,
+[data-theme="dark"] .department-progress {
+  background: #0f172a;
+}
+
+/* =========================================================
+DARK - DEPARTMENT
+========================================================= */
+
+[data-theme="dark"] .department-total,
+[data-theme="dark"] .employee-table th,
+[data-theme="dark"] .employee-table td {
+  border-color: rgba(255, 255, 255, 0.07);
+}
+
+/* =========================================================
+DARK - TABLE
+========================================================= */
+
+[data-theme="dark"] .employee-table tbody tr:hover {
+  background: rgba(94, 234, 212, 0.025);
+}
+
+[data-theme="dark"] .hr-link-btn {
+  color: #5eead4;
+}
+
+[data-theme="dark"] .hr-link-btn:hover {
+  color: #99f6e4;
+}
+
+/* =========================================================
+DARK - STATUS
+========================================================= */
+
+[data-theme="dark"] .employee-status.active {
+  color: #5eead4;
+  background: rgba(20, 184, 166, 0.1);
+}
+
+[data-theme="dark"] .employee-status.probation {
+  color: #fbbf24;
+  background: rgba(245, 158, 11, 0.1);
+}
+
+/* =========================================================
+RESPONSIVE - 1100
+========================================================= */
+
+@media (max-width: 1100px) {
+  .hr-summary-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hr-main-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hr-quick-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* =========================================================
+RESPONSIVE - 800
+========================================================= */
+
+@media (max-width: 800px) {
+  .hr-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .hr-header-actions {
+    width: 100%;
+  }
+
+  .hr-btn {
+    flex: 1;
+  }
+
+  .hr-summary-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* =========================================================
+RESPONSIVE - 640
+========================================================= */
+
+@media (max-width: 640px) {
+  .hr-page {
+    padding-top: 22px;
+    padding-bottom: 45px;
+  }
+
+  .hr-header,
+  .hr-summary-grid,
+  .hr-main-grid,
+  .employees-card,
+  .hr-quick-grid {
+    width: min(100% - 30px, 1180px);
+  }
+
+  .hr-header {
+    margin-bottom: 22px;
+  }
+
+  .hr-header h1 {
+    font-size: 34px;
+  }
+
+  .hr-header-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hr-btn {
+    width: 100%;
+    flex: none;
+  }
+
+  .hr-summary-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .summary-card {
+    min-height: 140px;
+  }
+
+  .attendance-card,
+  .department-card,
+  .employees-card {
+    padding: 18px;
+  }
+
+  .attendance-overview {
+    padding: 5px 0;
+  }
+
+  .attendance-ring {
+    width: 108px;
+    height: 108px;
+  }
+
+  .attendance-ring-inner {
+    width: 80px;
+    height: 80px;
+  }
+
+  .attendance-ring-inner strong {
+    font-size: 20px;
+  }
+
+  .attendance-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .hr-quick-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hr-quick-card {
+    min-height: 78px;
+  }
+}
+
+/* =========================================================
+RESPONSIVE - 430
+========================================================= */
+
+@media (max-width: 430px) {
+  .hr-header,
+  .hr-summary-grid,
+  .hr-main-grid,
+  .employees-card,
+  .hr-quick-grid {
+    width: calc(100% - 24px);
+  }
+
+  .hr-header h1 {
+    font-size: 31px;
+  }
+
+  .hr-header p {
+    font-size: 13px;
+  }
+
+  .summary-card {
+    padding: 18px;
+  }
+
+  .summary-value {
+    font-size: 24px;
+  }
+
+  .hr-card-header {
+    flex-direction: column;
+  }
+
+  .attendance-overview {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .attendance-ring {
+    align-self: center;
+  }
+}
+
+/* =========================================================
+REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .hr-btn,
+  .summary-card,
+  .hr-quick-card,
+  .hr-link-btn {
+    transition: none;
+  }
+}

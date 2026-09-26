@@ -1,0 +1,852 @@
+/* =========================================================
+   ABN WEBSITE
+   INDUSTRIES
+   THEME AWARE
+   ========================================================= */
+
+.industries-page {
+  width: 100%;
+  min-height: 100%;
+
+  padding: 24px;
+  box-sizing: border-box;
+
+  color: var(--text-primary);
+}
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.industries-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.industries-header-content {
+  min-width: 0;
+  max-width: 760px;
+}
+
+.industries-eyebrow {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: var(--text-info);
+
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+}
+
+.industries-header h1 {
+  margin: 0;
+
+  color: var(--text-primary);
+
+  font-size: 42px;
+  font-weight: 750;
+
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+}
+
+.industries-header h1 span {
+  color: var(--text-info);
+}
+
+.industries-header p {
+  max-width: 680px;
+
+  margin: 16px 0 0;
+
+  color: var(--text-secondary);
+
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* =========================================================
+   HEADER BADGE
+   ========================================================= */
+
+.industries-header-badge {
+  min-width: 245px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 11px;
+
+  padding: 11px 13px;
+  box-sizing: border-box;
+
+  background: var(--bg-surface);
+
+  border: 1px solid var(--border-color);
+  border-radius: 9px;
+
+  box-shadow: var(--shadow-sm);
+
+  transition: var(--theme-transition);
+}
+
+.industries-badge-icon {
+  width: 38px;
+  height: 38px;
+
+  flex: 0 0 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 8px;
+
+  background: var(--accent-soft);
+  color: var(--text-info);
+}
+
+.industries-header-badge strong {
+  display: block;
+
+  color: var(--text-primary);
+
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+}
+
+.industries-header-badge small {
+  display: block;
+
+  margin-top: 4px;
+
+  color: var(--text-muted);
+
+  font-size: 9px;
+}
+
+/* =========================================================
+   INDUSTRIES SECTION
+   ========================================================= */
+
+.industries-section {
+  margin-bottom: 40px;
+}
+
+.industries-section-heading {
+  max-width: 720px;
+
+  margin-bottom: 22px;
+}
+
+.industries-section-eyebrow {
+  display: block;
+
+  margin-bottom: 6px;
+
+  color: var(--text-info);
+
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.09em;
+}
+
+.industries-section-heading h2 {
+  margin: 0;
+
+  color: var(--text-primary);
+
+  font-size: 25px;
+  font-weight: 700;
+
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+}
+
+.industries-section-heading p {
+  margin: 8px 0 0;
+
+  color: var(--text-secondary);
+
+  font-size: 12px;
+  line-height: 1.65;
+}
+
+/* =========================================================
+   GRID
+   ========================================================= */
+
+.industries-grid {
+  display: grid;
+
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+
+  gap: 14px;
+}
+
+/* =========================================================
+   INDUSTRY CARD
+   ========================================================= */
+
+.industry-card {
+  min-width: 0;
+  min-height: 285px;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 18px;
+  box-sizing: border-box;
+
+  background: var(--bg-surface);
+
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+
+  transition:
+    background-color 0.18s ease,
+    border-color 0.18s ease,
+    transform 0.18s ease,
+    box-shadow 0.18s ease;
+}
+
+.industry-card:hover {
+  background: var(--bg-surface-soft);
+
+  border-color: var(--border-color-focus);
+
+  transform: translateY(-2px);
+
+  box-shadow: var(--shadow-sm);
+}
+
+.industry-card.featured,
+.industry-card.ecosystem {
+  border-color: var(--border-color-focus);
+}
+
+/* =========================================================
+   CARD TOP
+   ========================================================= */
+
+.industry-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 12px;
+
+  margin-bottom: 20px;
+}
+
+.industry-icon {
+  width: 44px;
+  height: 44px;
+
+  flex: 0 0 44px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 9px;
+
+  background: var(--bg-surface-soft);
+
+  color: var(--text-secondary);
+}
+
+.industry-card.featured .industry-icon,
+.industry-card.ecosystem .industry-icon {
+  background: var(--accent-soft);
+  color: var(--text-info);
+}
+
+.industry-number {
+  color: var(--text-muted);
+
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+/* =========================================================
+   CONTENT
+   ========================================================= */
+
+.industry-card-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.industry-card h3 {
+  margin: 0;
+
+  color: var(--text-primary);
+
+  font-size: 15px;
+  font-weight: 700;
+
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+}
+
+.industry-card p {
+  margin: 8px 0 0;
+
+  color: var(--text-secondary);
+
+  font-size: 11px;
+  line-height: 1.65;
+}
+
+/* =========================================================
+   TAGS
+   ========================================================= */
+
+.industry-tags {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 5px;
+
+  margin-top: 15px;
+}
+
+.industry-tags span {
+  display: inline-flex;
+  align-items: center;
+
+  min-height: 22px;
+
+  padding: 3px 7px;
+  box-sizing: border-box;
+
+  background: var(--bg-surface-soft);
+
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+
+  color: var(--text-muted);
+
+  font-size: 8px;
+  font-weight: 700;
+
+  letter-spacing: 0.02em;
+}
+
+/* =========================================================
+   LINK
+   ========================================================= */
+
+.industry-link {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 6px;
+
+  margin-top: 20px;
+
+  color: var(--text-info);
+
+  font-size: 10px;
+  font-weight: 700;
+
+  text-decoration: none;
+
+  transition:
+    color 0.15s ease,
+    gap 0.15s ease;
+}
+
+.industry-link:hover {
+  gap: 9px;
+
+  color: var(--text-primary);
+}
+
+.industry-link svg {
+  flex-shrink: 0;
+}
+
+/* =========================================================
+   INTELLIGENCE
+   ========================================================= */
+
+.industries-intelligence {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 0.9fr)
+    minmax(420px, 1.1fr);
+
+  gap: 30px;
+
+  align-items: center;
+
+  margin-bottom: 40px;
+
+  padding: 30px;
+  box-sizing: border-box;
+
+  background: var(--bg-surface);
+
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+
+  transition: var(--theme-transition);
+}
+
+.industries-intelligence-copy {
+  min-width: 0;
+  max-width: 580px;
+}
+
+.industries-intelligence-copy h2 {
+  margin: 0;
+
+  color: var(--text-primary);
+
+  font-size: 28px;
+  font-weight: 700;
+
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+}
+
+.industries-intelligence-copy p {
+  margin: 12px 0 20px;
+
+  color: var(--text-secondary);
+
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+/* =========================================================
+   BUTTON
+   ========================================================= */
+
+.industries-button {
+  min-height: 34px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  padding: 8px 13px;
+  box-sizing: border-box;
+
+  border: 1px solid var(--border-color-focus);
+  border-radius: 6px;
+
+  background: var(--accent-soft);
+  color: var(--text-info);
+
+  font-family: inherit;
+  font-size: 10px;
+  font-weight: 700;
+
+  text-decoration: none;
+
+  transition:
+    background-color 0.15s ease,
+    color 0.15s ease,
+    border-color 0.15s ease,
+    transform 0.15s ease;
+}
+
+.industries-button:hover {
+  background: var(--text-info);
+  border-color: var(--text-info);
+
+  color: var(--bg-surface);
+
+  transform: translateY(-1px);
+}
+
+.industries-button:focus-visible,
+.industry-link:focus-visible {
+  outline: 2px solid var(--text-info);
+  outline-offset: 2px;
+}
+
+/* =========================================================
+   INTELLIGENCE STACK
+   ========================================================= */
+
+.intelligence-stack {
+  display: flex;
+  align-items: stretch;
+
+  min-width: 0;
+}
+
+.stack-item {
+  min-width: 0;
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  min-height: 130px;
+
+  padding: 16px;
+  box-sizing: border-box;
+
+  background: var(--bg-surface-soft);
+
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+}
+
+.stack-item.active {
+  background: var(--accent-soft);
+  border-color: var(--border-color-focus);
+}
+
+.stack-item > span {
+  margin-bottom: 10px;
+
+  color: var(--text-muted);
+
+  font-size: 8px;
+  font-weight: 800;
+
+  letter-spacing: 0.08em;
+}
+
+.stack-item strong {
+  color: var(--text-primary);
+
+  font-size: 10px;
+  font-weight: 800;
+
+  line-height: 1.3;
+}
+
+.stack-item.active strong {
+  color: var(--text-info);
+}
+
+.stack-item small {
+  margin-top: 6px;
+
+  color: var(--text-muted);
+
+  font-size: 8px;
+  line-height: 1.4;
+}
+
+.stack-connector {
+  width: 25px;
+
+  flex: 0 0 25px;
+
+  align-self: center;
+
+  border-top: 1px dashed var(--border-color-focus);
+}
+
+/* =========================================================
+   CTA
+   ========================================================= */
+
+.industries-cta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 48px 24px;
+  box-sizing: border-box;
+
+  background: var(--bg-surface);
+
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+
+  text-align: center;
+
+  transition: var(--theme-transition);
+}
+
+.industries-cta h2 {
+  max-width: 700px;
+
+  margin: 0;
+
+  color: var(--text-primary);
+
+  font-size: 28px;
+  font-weight: 700;
+
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+}
+
+.industries-cta p {
+  max-width: 600px;
+
+  margin: 10px 0 20px;
+
+  color: var(--text-secondary);
+
+  font-size: 12px;
+  line-height: 1.65;
+}
+
+/* =========================================================
+   TABLET - 1200
+   ========================================================= */
+
+@media (max-width: 1200px) {
+  .industries-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .industries-intelligence {
+    grid-template-columns:
+      minmax(0, 1fr)
+      minmax(360px, 1fr);
+  }
+}
+
+/* =========================================================
+   TABLET - 900
+   ========================================================= */
+
+@media (max-width: 900px) {
+  .industries-page {
+    padding: 18px;
+  }
+
+  .industries-header {
+    align-items: flex-start;
+    flex-direction: column;
+
+    margin-bottom: 32px;
+  }
+
+  .industries-header h1 {
+    font-size: 34px;
+  }
+
+  .industries-header-badge {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .industries-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .industries-intelligence {
+    grid-template-columns: 1fr;
+
+    padding: 24px;
+  }
+}
+
+/* =========================================================
+   MOBILE - 600
+   ========================================================= */
+
+@media (max-width: 600px) {
+  .industries-page {
+    padding: 15px;
+  }
+
+  .industries-header {
+    margin-bottom: 26px;
+  }
+
+  .industries-eyebrow {
+    font-size: 9px;
+  }
+
+  .industries-header h1 {
+    font-size: 28px;
+  }
+
+  .industries-header p {
+    margin-top: 12px;
+
+    font-size: 12px;
+    line-height: 1.65;
+  }
+
+  .industries-header-badge {
+    padding: 10px 11px;
+  }
+
+  .industries-badge-icon {
+    width: 34px;
+    height: 34px;
+    flex-basis: 34px;
+  }
+
+  .industries-section-heading {
+    margin-bottom: 18px;
+  }
+
+  .industries-section-heading h2 {
+    font-size: 21px;
+  }
+
+  .industries-section-heading p {
+    font-size: 11px;
+  }
+
+  .industries-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .industry-card {
+    min-height: 0;
+    padding: 15px;
+  }
+
+  .industry-card-top {
+    margin-bottom: 17px;
+  }
+
+  .industry-icon {
+    width: 38px;
+    height: 38px;
+    flex-basis: 38px;
+  }
+
+  .industry-card h3 {
+    font-size: 14px;
+  }
+
+  .industry-card p {
+    font-size: 10px;
+  }
+
+  .industry-link {
+    font-size: 9px;
+  }
+
+  .industries-intelligence {
+    gap: 20px;
+
+    margin-bottom: 26px;
+
+    padding: 20px 16px;
+  }
+
+  .industries-intelligence-copy h2 {
+    font-size: 23px;
+  }
+
+  .industries-intelligence-copy p {
+    font-size: 11px;
+  }
+
+  .intelligence-stack {
+    flex-direction: column;
+  }
+
+  .stack-item {
+    min-height: 92px;
+  }
+
+  .stack-connector {
+    width: 100%;
+    height: 15px;
+
+    flex-basis: 15px;
+
+    border-top: 0;
+    border-left: 1px dashed var(--border-color-focus);
+  }
+
+  .industries-cta {
+    padding: 35px 18px;
+  }
+
+  .industries-cta h2 {
+    font-size: 23px;
+  }
+
+  .industries-cta p {
+    font-size: 11px;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE - 430
+   ========================================================= */
+
+@media (max-width: 430px) {
+  .industries-page {
+    padding: 10px;
+  }
+
+  .industries-header h1 {
+    font-size: 25px;
+  }
+
+  .industries-header p {
+    font-size: 11px;
+  }
+
+  .industries-section-heading h2 {
+    font-size: 19px;
+  }
+
+  .industry-card {
+    padding: 13px;
+  }
+
+  .industry-tags {
+    gap: 4px;
+  }
+
+  .industry-tags span {
+    font-size: 7px;
+  }
+
+  .industries-intelligence {
+    padding: 18px 13px;
+  }
+
+  .industries-intelligence-copy h2 {
+    font-size: 21px;
+  }
+
+  .industries-cta {
+    padding: 30px 14px;
+  }
+
+  .industries-cta h2 {
+    font-size: 21px;
+  }
+}
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .industry-card,
+  .industries-header-badge,
+  .industries-intelligence,
+  .industries-cta,
+  .industries-button,
+  .industry-link {
+    transition: none;
+  }
+}

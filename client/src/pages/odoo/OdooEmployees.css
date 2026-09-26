@@ -1,0 +1,756 @@
+/* =========================================================
+   ABN INDUSTRY 4.0
+   ODOO EMPLOYEES
+   ========================================================= */
+
+.odoo-employees-page {
+  width: 100%;
+  min-height: 100%;
+  color: var(--text-primary, #172033);
+  background: var(--background-primary, #ffffff);
+  overflow: hidden;
+}
+
+.odoo-employees-container {
+  width: min(1180px, calc(100% - 48px));
+  margin: 0 auto;
+}
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.odoo-employees-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+
+  padding: 30px 0 20px;
+}
+
+.odoo-employees-heading {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.odoo-employees-heading-icon {
+  width: 46px;
+  height: 46px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #0f766e;
+  background: rgba(15, 118, 110, 0.08);
+
+  border: 1px solid rgba(15, 118, 110, 0.12);
+  border-radius: 12px;
+}
+
+.odoo-employees-eyebrow {
+  display: block;
+
+  margin-bottom: 4px;
+
+  color: #0f766e;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.odoo-employees-heading h1 {
+  margin: 0;
+
+  color: var(--text-primary, #172033);
+
+  font-size: clamp(25px, 3vw, 32px);
+  line-height: 1.1;
+
+  letter-spacing: -0.035em;
+  font-weight: 800;
+}
+
+.odoo-employees-heading p {
+  margin: 6px 0 0;
+
+  color: var(--text-secondary, #64748b);
+
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* =========================================================
+   REFRESH BUTTON
+   ========================================================= */
+
+.odoo-employees-refresh {
+  min-height: 42px;
+
+  padding: 0 16px;
+
+  border: 1px solid rgba(15, 118, 110, 0.3);
+  border-radius: 10px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  color: #0f766e;
+  background: var(--surface-primary, #ffffff);
+
+  font: inherit;
+  font-size: 12px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.odoo-employees-refresh:hover:not(:disabled) {
+  transform: translateY(-2px);
+
+  color: #ffffff;
+  background: #0f766e;
+  border-color: #0f766e;
+
+  box-shadow: 0 10px 25px rgba(15, 118, 110, 0.2);
+}
+
+.odoo-employees-refresh:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.odoo-employees-refresh:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+/* =========================================================
+   SPINNER
+   ========================================================= */
+
+.odoo-employees-spin {
+  animation: odoo-employees-spin 0.9s linear infinite;
+}
+
+@keyframes odoo-employees-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =========================================================
+   TOOLBAR
+   ========================================================= */
+
+.odoo-employees-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  margin-bottom: 16px;
+  padding: 15px;
+
+  background: var(--surface-primary, #ffffff);
+
+  border: 1px solid var(--border-color, #e2e8f0);
+  border-radius: 14px;
+
+  box-shadow:
+    0 6px 18px rgba(15, 23, 42, 0.045),
+    0 1px 3px rgba(15, 23, 42, 0.03);
+}
+
+/* =========================================================
+   SEARCH
+   ========================================================= */
+
+.odoo-employees-search {
+  position: relative;
+
+  width: min(540px, 100%);
+
+  display: flex;
+  align-items: center;
+}
+
+.odoo-employees-search-icon {
+  position: absolute;
+  left: 13px;
+
+  color: #94a3b8;
+
+  pointer-events: none;
+}
+
+.odoo-employees-search input {
+  width: 100%;
+  height: 40px;
+
+  padding: 0 13px 0 39px;
+
+  color: var(--text-primary, #172033);
+  background: var(--surface-secondary, #f8fafc);
+
+  border: 1px solid var(--border-color, #e2e8f0);
+  border-radius: 10px;
+
+  outline: none;
+
+  font: inherit;
+  font-size: 13px;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.odoo-employees-search input::placeholder {
+  color: #94a3b8;
+}
+
+.odoo-employees-search input:hover {
+  border-color: #cbd5e1;
+  background: #ffffff;
+}
+
+.odoo-employees-search input:focus {
+  border-color: #0f766e;
+  background: #ffffff;
+
+  box-shadow: 0 0 0 3px rgba(15, 118, 110, 0.1);
+}
+
+/* =========================================================
+   META
+   ========================================================= */
+
+.odoo-employees-meta {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  gap: 8px;
+
+  color: var(--text-secondary, #64748b);
+
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.odoo-employees-meta strong {
+  color: #0f766e;
+  font-weight: 800;
+}
+
+.odoo-employees-meta-separator {
+  color: #cbd5e1;
+}
+
+/* =========================================================
+   ERROR
+   ========================================================= */
+
+.odoo-employees-alert {
+  margin-bottom: 16px;
+  padding: 13px 15px;
+
+  color: #991b1b;
+  background: #fef2f2;
+
+  border: 1px solid #fecaca;
+  border-radius: 10px;
+
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.odoo-employees-alert strong {
+  font-weight: 800;
+}
+
+/* =========================================================
+   TABLE CARD
+   ========================================================= */
+
+.odoo-employees-table-card {
+  overflow: hidden;
+
+  background: var(--surface-primary, #ffffff);
+
+  border: 1px solid var(--border-color, #e2e8f0);
+  border-radius: 16px;
+
+  box-shadow:
+    0 10px 30px rgba(15, 23, 42, 0.05),
+    0 1px 3px rgba(15, 23, 42, 0.03);
+}
+
+.odoo-employees-table-wrap {
+  width: 100%;
+  overflow-x: auto;
+}
+
+/* =========================================================
+   TABLE
+   ========================================================= */
+
+.odoo-employees-table {
+  width: 100%;
+  min-width: 1050px;
+
+  border-collapse: collapse;
+
+  font-size: 12px;
+}
+
+.odoo-employees-table thead {
+  background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+}
+
+.odoo-employees-table th {
+  padding: 13px 14px;
+
+  color: #64748b;
+
+  border-bottom: 1px solid var(--border-color, #e2e8f0);
+
+  font-size: 9px;
+  font-weight: 800;
+
+  letter-spacing: 0.1em;
+  text-align: left;
+  text-transform: uppercase;
+
+  white-space: nowrap;
+}
+
+.odoo-employees-table td {
+  padding: 14px;
+
+  color: var(--text-primary, #172033);
+
+  border-bottom: 1px solid #eef2f7;
+
+  vertical-align: middle;
+}
+
+.odoo-employees-table tbody tr {
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.odoo-employees-table tbody tr:hover {
+  background: rgba(15, 118, 110, 0.035);
+}
+
+.odoo-employees-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+/* =========================================================
+   COLUMN SIZES
+   ========================================================= */
+
+.odoo-employees-col-id,
+.odoo-employees-id {
+  width: 70px;
+}
+
+.odoo-employees-col-status {
+  width: 110px;
+}
+
+/* =========================================================
+   EMPLOYEE
+   ========================================================= */
+
+.odoo-employees-id {
+  color: #0f766e !important;
+
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+}
+
+.odoo-employees-name {
+  color: var(--text-primary, #172033);
+
+  font-size: 13px;
+  font-weight: 750;
+}
+
+.odoo-employees-subtext {
+  display: block;
+
+  margin-top: 4px;
+
+  color: var(--text-secondary, #64748b);
+
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+.odoo-employees-contact {
+  font-size: 12px;
+}
+
+/* =========================================================
+   RELATION
+   ========================================================= */
+
+.odoo-employees-relation {
+  color: #475569;
+
+  font-size: 11px;
+  font-weight: 600;
+}
+
+/* =========================================================
+   ODOO USER
+   ========================================================= */
+
+.odoo-employees-user {
+  display: inline-flex;
+  align-items: center;
+
+  max-width: 180px;
+
+  padding: 5px 8px;
+
+  color: #0f766e;
+  background: rgba(15, 118, 110, 0.07);
+
+  border: 1px solid rgba(15, 118, 110, 0.12);
+  border-radius: 7px;
+
+  font-size: 10px;
+  font-weight: 750;
+
+  line-height: 1.2;
+
+  word-break: break-word;
+}
+
+.odoo-employees-no-user {
+  color: #94a3b8;
+
+  font-size: 11px;
+}
+
+/* =========================================================
+   STATUS
+   ========================================================= */
+
+.odoo-employees-status {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 6px;
+
+  padding: 5px 9px;
+
+  border: 1px solid transparent;
+  border-radius: 999px;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  line-height: 1;
+}
+
+.odoo-employees-status-dot {
+  width: 6px;
+  height: 6px;
+
+  flex: 0 0 6px;
+
+  border-radius: 50%;
+}
+
+.odoo-employees-status.is-active {
+  color: #166534;
+
+  background: rgba(34, 197, 94, 0.09);
+  border-color: rgba(34, 197, 94, 0.18);
+}
+
+.odoo-employees-status.is-active .odoo-employees-status-dot {
+  background: #22c55e;
+
+  box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.1);
+}
+
+.odoo-employees-status.is-inactive {
+  color: #64748b;
+
+  background: #f1f5f9;
+  border-color: #e2e8f0;
+}
+
+.odoo-employees-status.is-inactive .odoo-employees-status-dot {
+  background: #94a3b8;
+}
+
+/* =========================================================
+   LOADING / EMPTY STATE
+   ========================================================= */
+
+.odoo-employees-state {
+  height: 230px;
+
+  color: #94a3b8;
+
+  text-align: center !important;
+}
+
+.odoo-employees-state > svg {
+  display: block;
+
+  margin: 0 auto 10px;
+}
+
+.odoo-employees-state span {
+  display: block;
+
+  color: var(--text-secondary, #64748b);
+
+  font-size: 13px;
+}
+
+/* =========================================================
+   DARK MODE
+   ========================================================= */
+
+[data-theme="dark"] .odoo-employees-page {
+  color: #f8fafc;
+  background: #0b1220;
+}
+
+[data-theme="dark"] .odoo-employees-heading h1 {
+  color: #f8fafc;
+}
+
+[data-theme="dark"] .odoo-employees-heading p {
+  color: #94a3b8;
+}
+
+[data-theme="dark"] .odoo-employees-heading-icon {
+  color: #5eead4;
+
+  background: rgba(20, 184, 166, 0.09);
+  border-color: rgba(94, 234, 212, 0.15);
+}
+
+[data-theme="dark"] .odoo-employees-toolbar,
+[data-theme="dark"] .odoo-employees-table-card {
+  background: #111827;
+
+  border-color: rgba(255, 255, 255, 0.08);
+
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+}
+
+[data-theme="dark"] .odoo-employees-refresh {
+  color: #5eead4;
+  background: #111827;
+
+  border-color: rgba(94, 234, 212, 0.25);
+}
+
+[data-theme="dark"] .odoo-employees-refresh:hover:not(:disabled) {
+  color: #062c2a;
+  background: #5eead4;
+
+  border-color: #5eead4;
+}
+
+[data-theme="dark"] .odoo-employees-search input {
+  color: #e2e8f0;
+  background: #0f172a;
+
+  border-color: rgba(255, 255, 255, 0.09);
+}
+
+[data-theme="dark"] .odoo-employees-search input:hover,
+[data-theme="dark"] .odoo-employees-search input:focus {
+  background: #0f172a;
+}
+
+[data-theme="dark"] .odoo-employees-search input:focus {
+  border-color: #14b8a6;
+
+  box-shadow: 0 0 0 3px rgba(20, 184, 166, 0.12);
+}
+
+[data-theme="dark"] .odoo-employees-meta {
+  color: #94a3b8;
+}
+
+[data-theme="dark"] .odoo-employees-table thead {
+  background: #0f172a;
+}
+
+[data-theme="dark"] .odoo-employees-table th {
+  color: #94a3b8;
+
+  border-color: rgba(255, 255, 255, 0.07);
+}
+
+[data-theme="dark"] .odoo-employees-table td {
+  color: #cbd5e1;
+
+  border-color: rgba(255, 255, 255, 0.06);
+}
+
+[data-theme="dark"] .odoo-employees-table tbody tr:hover {
+  background: rgba(20, 184, 166, 0.055);
+}
+
+[data-theme="dark"] .odoo-employees-name {
+  color: #f8fafc;
+}
+
+[data-theme="dark"] .odoo-employees-subtext {
+  color: #94a3b8;
+}
+
+[data-theme="dark"] .odoo-employees-relation {
+  color: #cbd5e1;
+}
+
+[data-theme="dark"] .odoo-employees-user {
+  color: #5eead4;
+
+  background: rgba(20, 184, 166, 0.08);
+
+  border-color: rgba(20, 184, 166, 0.14);
+}
+
+[data-theme="dark"] .odoo-employees-no-user {
+  color: #64748b;
+}
+
+[data-theme="dark"] .odoo-employees-status.is-inactive {
+  color: #94a3b8;
+
+  background: #1e293b;
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+[data-theme="dark"] .odoo-employees-state span {
+  color: #94a3b8;
+}
+
+[data-theme="dark"] .odoo-employees-alert {
+  color: #fecaca;
+
+  background: rgba(127, 29, 29, 0.25);
+
+  border-color: rgba(248, 113, 113, 0.2);
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1100px) {
+  .odoo-employees-container {
+    width: min(100% - 40px, 1180px);
+  }
+
+  .odoo-employees-header {
+    padding-top: 25px;
+  }
+}
+
+@media (max-width: 900px) {
+  .odoo-employees-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .odoo-employees-refresh {
+    align-self: flex-start;
+  }
+
+  .odoo-employees-toolbar {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .odoo-employees-search {
+    width: 100%;
+  }
+
+  .odoo-employees-meta {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 640px) {
+  .odoo-employees-container {
+    width: min(100% - 32px, 1180px);
+  }
+
+  .odoo-employees-header {
+    padding: 22px 0 16px;
+  }
+
+  .odoo-employees-heading-icon {
+    width: 42px;
+    height: 42px;
+  }
+
+  .odoo-employees-heading h1 {
+    font-size: 23px;
+  }
+
+  .odoo-employees-eyebrow {
+    font-size: 9px;
+  }
+
+  .odoo-employees-heading p {
+    font-size: 12px;
+  }
+
+  .odoo-employees-toolbar {
+    padding: 12px;
+  }
+
+  .odoo-employees-meta {
+    flex-wrap: wrap;
+
+    white-space: normal;
+  }
+
+  .odoo-employees-table {
+    min-width: 1000px;
+  }
+
+  .odoo-employees-table th,
+  .odoo-employees-table td {
+    padding: 12px;
+  }
+}

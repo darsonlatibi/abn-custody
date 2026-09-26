@@ -1,0 +1,1419 @@
+/*
+=========================================================
+ABN INDUSTRY 4.0
+
+INDUSTRIAL IoT
+=========================================================
+*/
+
+.iiot-page {
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+
+  color: var(--text-primary, #111827);
+  background: var(--bg-primary, #ffffff);
+}
+
+.iiot-container {
+  width: min(1180px, calc(100% - 48px));
+  margin: 0 auto;
+}
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.iiot-hero {
+  position: relative;
+
+  min-height: 650px;
+
+  display: flex;
+  align-items: center;
+
+  background:
+    radial-gradient(
+      circle at 82% 18%,
+      rgba(20, 184, 166, 0.13),
+      transparent 32%
+    ),
+    radial-gradient(
+      circle at 18% 82%,
+      rgba(15, 118, 110, 0.08),
+      transparent 35%
+    ),
+    #f8fafc;
+
+  overflow: hidden;
+}
+
+.iiot-hero::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background-image:
+    linear-gradient(rgba(15, 118, 110, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(15, 118, 110, 0.045) 1px, transparent 1px);
+
+  background-size: 42px 42px;
+
+  pointer-events: none;
+}
+
+.iiot-hero-grid {
+  position: relative;
+  z-index: 1;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 70px;
+  align-items: center;
+}
+
+/* =========================================================
+   HERO CONTENT
+   ========================================================= */
+
+.iiot-hero-content {
+  max-width: 620px;
+}
+
+.iiot-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  margin-bottom: 22px;
+
+  color: #0f766e;
+
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+}
+
+.iiot-hero h1 {
+  margin: 0;
+
+  color: #0f172a;
+
+  font-size: clamp(44px, 5vw, 68px);
+  line-height: 1.04;
+  letter-spacing: -0.045em;
+}
+
+.iiot-hero h1 span {
+  display: block;
+  color: #0f766e;
+}
+
+.iiot-hero-copy {
+  max-width: 580px;
+
+  margin: 26px 0 0;
+
+  color: #64748b;
+
+  font-size: 17px;
+  line-height: 1.75;
+}
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
+.iiot-hero-buttons {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  margin-top: 34px;
+}
+
+.iiot-btn {
+  min-height: 46px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+
+  padding: 0 20px;
+
+  border: 1px solid transparent;
+  border-radius: 10px;
+
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.iiot-btn:hover {
+  transform: translateY(-2px);
+}
+
+.iiot-btn-primary {
+  color: #ffffff;
+  background: #0f766e;
+}
+
+.iiot-btn-primary:hover {
+  background: #115e59;
+}
+
+.iiot-btn-secondary {
+  color: #0f172a;
+  background: #ffffff;
+  border-color: #cbd5e1;
+}
+
+.iiot-btn-secondary:hover {
+  color: #0f766e;
+  border-color: #0f766e;
+}
+
+/* =========================================================
+   HERO POINTS
+   ========================================================= */
+
+.iiot-hero-points {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+
+  margin-top: 28px;
+}
+
+.iiot-hero-points div {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+
+  color: #475569;
+
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.iiot-hero-points svg {
+  color: #0f766e;
+}
+
+/* =========================================================
+   HERO SYSTEM CARD
+   ========================================================= */
+
+.iiot-hero-visual {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.iiot-system-card {
+  width: 100%;
+  max-width: 530px;
+
+  overflow: hidden;
+
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  border-radius: 18px;
+
+  background: linear-gradient(145deg, #0f172a, #111827 60%, #0f2f2c);
+
+  box-shadow:
+    0 35px 80px rgba(15, 23, 42, 0.22),
+    0 10px 25px rgba(15, 118, 110, 0.08);
+}
+
+.iiot-system-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 18px 20px;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.iiot-system-title {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  color: #e2e8f0;
+
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.iiot-system-title svg {
+  color: #5eead4;
+}
+
+.iiot-system-status {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  color: #94a3b8;
+
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.iiot-status-dot {
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: #5eead4;
+
+  box-shadow: 0 0 12px rgba(94, 234, 212, 0.8);
+}
+
+/* =========================================================
+   SYSTEM MAIN
+   ========================================================= */
+
+.iiot-system-main {
+  padding: 25px 20px;
+}
+
+.iiot-code-panel {
+  display: grid;
+  gap: 9px;
+
+  margin-bottom: 28px;
+}
+
+.iiot-code-line {
+  display: grid;
+  grid-template-columns: 28px 1fr auto;
+
+  align-items: center;
+  gap: 8px;
+
+  min-height: 30px;
+
+  padding: 0 10px;
+
+  border-radius: 7px;
+
+  background: rgba(255, 255, 255, 0.035);
+
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+
+  font-size: 10px;
+}
+
+.iiot-code-line span {
+  color: #475569;
+}
+
+.iiot-code-line strong {
+  color: #cbd5e1;
+  font-weight: 600;
+}
+
+.iiot-code-line em {
+  color: #5eead4;
+
+  font-style: normal;
+  font-weight: 700;
+}
+
+/* =========================================================
+   FLOW
+   ========================================================= */
+
+.iiot-system-flow {
+  display: grid;
+  grid-template-columns: 1fr 45px 1fr 45px 1fr;
+
+  align-items: center;
+  gap: 8px;
+}
+
+.iiot-flow-node {
+  min-height: 86px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  padding: 10px;
+
+  border: 1px solid rgba(148, 163, 184, 0.16);
+  border-radius: 12px;
+
+  background: rgba(255, 255, 255, 0.035);
+
+  color: #94a3b8;
+
+  text-align: center;
+}
+
+.iiot-flow-node svg {
+  color: #64748b;
+}
+
+.iiot-flow-node span {
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+}
+
+.iiot-flow-active {
+  border-color: rgba(94, 234, 212, 0.28);
+
+  background: rgba(20, 184, 166, 0.09);
+
+  color: #e2e8f0;
+}
+
+.iiot-flow-active svg {
+  color: #5eead4;
+}
+
+.iiot-flow-line {
+  position: relative;
+
+  height: 1px;
+
+  background: rgba(94, 234, 212, 0.35);
+}
+
+.iiot-flow-line::after {
+  content: "";
+
+  position: absolute;
+
+  right: 0;
+  top: -3px;
+
+  width: 7px;
+  height: 7px;
+
+  border-top: 1px solid #5eead4;
+  border-right: 1px solid #5eead4;
+
+  transform: rotate(45deg);
+}
+
+/* =========================================================
+   SYSTEM FOOTER
+   ========================================================= */
+
+.iiot-system-footer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.iiot-system-footer div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  padding: 15px 18px;
+}
+
+.iiot-system-footer div + div {
+  border-left: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.iiot-system-footer span {
+  color: #64748b;
+
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.iiot-system-footer strong {
+  color: #cbd5e1;
+
+  font-size: 11px;
+  font-weight: 800;
+}
+
+/* =========================================================
+   SECTIONS
+   ========================================================= */
+
+.iiot-section {
+  padding: 100px 0;
+}
+
+.iiot-intro {
+  background: #ffffff;
+}
+
+.iiot-section-heading {
+  max-width: 720px;
+
+  margin: 0 auto 55px;
+
+  text-align: center;
+}
+
+.iiot-section-heading span,
+.iiot-solution-copy > span {
+  display: block;
+
+  margin-bottom: 13px;
+
+  color: #0f766e;
+
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+}
+
+.iiot-section-heading h2,
+.iiot-solution-copy h2 {
+  margin: 0;
+
+  color: #0f172a;
+
+  font-size: clamp(32px, 4vw, 46px);
+  line-height: 1.12;
+  letter-spacing: -0.035em;
+}
+
+.iiot-section-heading h2 strong,
+.iiot-solution-copy h2 strong {
+  display: block;
+
+  color: #0f766e;
+}
+
+.iiot-section-heading p,
+.iiot-solution-copy > p {
+  margin: 20px auto 0;
+
+  color: #64748b;
+
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+/* =========================================================
+   CAPABILITY
+   ========================================================= */
+
+.iiot-capability-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 18px;
+}
+
+.iiot-capability-card {
+  padding: 27px 24px;
+
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+
+  background: #ffffff;
+
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.iiot-capability-card:hover {
+  transform: translateY(-4px);
+
+  border-color: rgba(15, 118, 110, 0.35);
+
+  box-shadow: 0 18px 35px rgba(15, 23, 42, 0.08);
+}
+
+.iiot-capability-icon {
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 20px;
+
+  border-radius: 11px;
+
+  color: #0f766e;
+  background: #ecfdf5;
+}
+
+.iiot-capability-card h3 {
+  margin: 0 0 10px;
+
+  color: #0f172a;
+
+  font-size: 18px;
+}
+
+.iiot-capability-card p {
+  margin: 0;
+
+  color: #64748b;
+
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* =========================================================
+   SERVICES
+   ========================================================= */
+
+.iiot-services {
+  background: #f8fafc;
+}
+
+.iiot-service-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 20px;
+}
+
+.iiot-service-card {
+  padding: 28px;
+
+  border: 1px solid #e2e8f0;
+  border-radius: 15px;
+
+  background: #ffffff;
+
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.iiot-service-card:hover {
+  transform: translateY(-5px);
+
+  border-color: rgba(15, 118, 110, 0.35);
+
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08);
+}
+
+.iiot-service-icon {
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 21px;
+
+  border-radius: 11px;
+
+  color: #0f766e;
+  background: #ecfdf5;
+}
+
+.iiot-service-card h3 {
+  margin: 0 0 11px;
+
+  color: #0f172a;
+
+  font-size: 19px;
+}
+
+.iiot-service-card > p {
+  min-height: 72px;
+
+  margin: 0;
+
+  color: #64748b;
+
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.iiot-service-features {
+  display: grid;
+  gap: 9px;
+
+  margin-top: 22px;
+  padding-top: 19px;
+
+  border-top: 1px solid #e2e8f0;
+}
+
+.iiot-service-features div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  color: #475569;
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.iiot-service-features svg {
+  flex-shrink: 0;
+  color: #0f766e;
+}
+
+.iiot-card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+
+  margin-top: 23px;
+  padding: 0;
+
+  border: 0;
+
+  background: transparent;
+
+  color: #0f766e;
+
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 800;
+
+  cursor: pointer;
+}
+
+.iiot-card-link:hover {
+  color: #115e59;
+}
+
+.iiot-card-link svg {
+  transition: transform 0.2s ease;
+}
+
+.iiot-card-link:hover svg {
+  transform: translateX(3px);
+}
+
+/* =========================================================
+   SOLUTIONS
+   ========================================================= */
+
+.iiot-solutions {
+  color: #ffffff;
+
+  background:
+    radial-gradient(
+      circle at 85% 20%,
+      rgba(20, 184, 166, 0.12),
+      transparent 30%
+    ),
+    #0f172a;
+}
+
+.iiot-solution-layout {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+
+  gap: 80px;
+  align-items: center;
+}
+
+.iiot-solution-copy > span {
+  color: #5eead4;
+}
+
+.iiot-solution-copy h2 {
+  color: #ffffff;
+}
+
+.iiot-solution-copy h2 strong {
+  color: #5eead4;
+}
+
+.iiot-solution-copy > p {
+  max-width: 560px;
+
+  margin-left: 0;
+  margin-right: 0;
+
+  color: #94a3b8;
+}
+
+.iiot-solution-highlight {
+  display: flex;
+  align-items: flex-start;
+  gap: 13px;
+
+  max-width: 460px;
+
+  margin-top: 30px;
+  padding: 17px;
+
+  border: 1px solid rgba(94, 234, 212, 0.13);
+  border-radius: 11px;
+
+  background: rgba(255, 255, 255, 0.035);
+}
+
+.iiot-solution-highlight > svg {
+  flex-shrink: 0;
+
+  margin-top: 2px;
+
+  color: #5eead4;
+}
+
+.iiot-solution-highlight strong {
+  color: #e2e8f0;
+
+  font-size: 13px;
+}
+
+.iiot-solution-highlight p {
+  margin: 5px 0 0;
+
+  color: #64748b;
+
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.iiot-solution-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 16px;
+}
+
+.iiot-solution-card {
+  position: relative;
+
+  min-height: 210px;
+
+  padding: 25px;
+
+  border: 1px solid rgba(148, 163, 184, 0.13);
+  border-radius: 14px;
+
+  background: rgba(255, 255, 255, 0.035);
+
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    background 0.2s ease;
+}
+
+.iiot-solution-card:hover {
+  transform: translateY(-4px);
+
+  border-color: rgba(94, 234, 212, 0.28);
+
+  background: rgba(20, 184, 166, 0.055);
+}
+
+.iiot-solution-icon {
+  width: 44px;
+  height: 44px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 20px;
+
+  border-radius: 10px;
+
+  color: #5eead4;
+  background: rgba(20, 184, 166, 0.1);
+}
+
+.iiot-solution-card h3 {
+  margin: 0 0 10px;
+
+  color: #e2e8f0;
+
+  font-size: 17px;
+}
+
+.iiot-solution-card p {
+  margin: 0;
+
+  color: #94a3b8;
+
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.iiot-solution-card > svg {
+  position: absolute;
+
+  right: 22px;
+  bottom: 22px;
+
+  color: #475569;
+}
+
+.iiot-solution-card:hover > svg {
+  color: #5eead4;
+}
+
+/* =========================================================
+   TECHNOLOGY
+   ========================================================= */
+
+.iiot-technology {
+  background: #ffffff;
+}
+
+.iiot-tech-layout {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+
+  gap: 90px;
+  align-items: center;
+}
+
+.iiot-heading-left {
+  margin: 0 0 30px;
+
+  text-align: left;
+}
+
+.iiot-heading-left p {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.iiot-tech-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 11px;
+}
+
+.iiot-tech-item {
+  min-height: 52px;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 0 15px;
+
+  border: 1px solid #e2e8f0;
+  border-radius: 9px;
+
+  color: #334155;
+
+  background: #f8fafc;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.iiot-tech-item:hover {
+  transform: translateY(-2px);
+
+  border-color: rgba(15, 118, 110, 0.3);
+
+  background: #f0fdfa;
+}
+
+.iiot-tech-item svg {
+  flex-shrink: 0;
+
+  color: #0f766e;
+}
+
+/* =========================================================
+   ARCHITECTURE
+   ========================================================= */
+
+.iiot-architecture {
+  padding: 100px 0;
+
+  background: #f8fafc;
+}
+
+.iiot-architecture-flow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 13px;
+}
+
+.iiot-architecture-node {
+  width: 145px;
+  min-height: 165px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  padding: 18px;
+
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+
+  background: #ffffff;
+
+  text-align: center;
+
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.05);
+
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.iiot-architecture-node:hover {
+  transform: translateY(-4px);
+
+  border-color: rgba(15, 118, 110, 0.35);
+}
+
+.iiot-architecture-node svg {
+  color: #0f766e;
+}
+
+.iiot-architecture-node strong {
+  color: #0f172a;
+
+  font-size: 11px;
+  letter-spacing: 0.08em;
+}
+
+.iiot-architecture-node span {
+  color: #64748b;
+
+  font-size: 11px;
+  line-height: 1.65;
+}
+
+.iiot-architecture-active {
+  border-color: rgba(15, 118, 110, 0.4);
+
+  background: #f0fdfa;
+}
+
+.iiot-architecture-connector {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+
+  color: #0f766e;
+}
+
+.iiot-architecture-connector span {
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+/* =========================================================
+   CTA
+   ========================================================= */
+
+.iiot-cta {
+  padding: 72px 0;
+
+  color: #ffffff;
+
+  background: linear-gradient(135deg, #0f766e, #115e59);
+}
+
+.iiot-cta-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 40px;
+}
+
+.iiot-cta-inner > div {
+  max-width: 720px;
+}
+
+.iiot-cta-inner span {
+  display: block;
+
+  margin-bottom: 11px;
+
+  color: #99f6e4;
+
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+}
+
+.iiot-cta h2 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: clamp(30px, 4vw, 44px);
+  line-height: 1.12;
+  letter-spacing: -0.03em;
+}
+
+.iiot-cta h2 strong {
+  display: block;
+
+  color: #ccfbf1;
+}
+
+.iiot-cta p {
+  max-width: 650px;
+
+  margin: 17px 0 0;
+
+  color: rgba(255, 255, 255, 0.78);
+
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.iiot-btn-light {
+  flex-shrink: 0;
+
+  color: #0f766e;
+  background: #ffffff;
+}
+
+.iiot-btn-light:hover {
+  color: #115e59;
+  background: #f0fdfa;
+}
+
+/* =========================================================
+   DARK MODE
+   ========================================================= */
+
+[data-theme="dark"] .iiot-page {
+  color: #e2e8f0;
+  background: #020617;
+}
+
+[data-theme="dark"] .iiot-hero {
+  background:
+    radial-gradient(
+      circle at 82% 18%,
+      rgba(20, 184, 166, 0.1),
+      transparent 32%
+    ),
+    #020617;
+}
+
+[data-theme="dark"] .iiot-hero h1 {
+  color: #f8fafc;
+}
+
+[data-theme="dark"] .iiot-hero-copy {
+  color: #94a3b8;
+}
+
+[data-theme="dark"] .iiot-btn-secondary {
+  color: #e2e8f0;
+  background: #0f172a;
+  border-color: #334155;
+}
+
+[data-theme="dark"] .iiot-btn-secondary:hover {
+  color: #5eead4;
+  border-color: #5eead4;
+}
+
+[data-theme="dark"] .iiot-hero-points div {
+  color: #94a3b8;
+}
+
+[data-theme="dark"] .iiot-intro,
+[data-theme="dark"] .iiot-technology {
+  background: #020617;
+}
+
+[data-theme="dark"] .iiot-section-heading h2 {
+  color: #f8fafc;
+}
+
+[data-theme="dark"] .iiot-section-heading p {
+  color: #94a3b8;
+}
+
+[data-theme="dark"] .iiot-capability-card,
+[data-theme="dark"] .iiot-service-card {
+  border-color: #1e293b;
+  background: #0f172a;
+}
+
+[data-theme="dark"] .iiot-capability-card h3,
+[data-theme="dark"] .iiot-service-card h3 {
+  color: #f1f5f9;
+}
+
+[data-theme="dark"] .iiot-capability-card p,
+[data-theme="dark"] .iiot-service-card > p {
+  color: #94a3b8;
+}
+
+[data-theme="dark"] .iiot-services,
+[data-theme="dark"] .iiot-architecture {
+  background: #0f172a;
+}
+
+[data-theme="dark"] .iiot-service-features {
+  border-color: #1e293b;
+}
+
+[data-theme="dark"] .iiot-service-features div {
+  color: #cbd5e1;
+}
+
+[data-theme="dark"] .iiot-tech-item {
+  border-color: #1e293b;
+  background: #0f172a;
+  color: #cbd5e1;
+}
+
+[data-theme="dark"] .iiot-tech-item:hover {
+  border-color: rgba(94, 234, 212, 0.25);
+  background: #111827;
+}
+
+[data-theme="dark"] .iiot-architecture-node {
+  border-color: #1e293b;
+  background: #020617;
+}
+
+[data-theme="dark"] .iiot-architecture-node strong {
+  color: #e2e8f0;
+}
+
+[data-theme="dark"] .iiot-architecture-node span {
+  color: #94a3b8;
+}
+
+[data-theme="dark"] .iiot-architecture-active {
+  border-color: rgba(94, 234, 212, 0.3);
+  background: #0f2423;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1100px) {
+  .iiot-hero-grid {
+    gap: 45px;
+  }
+
+  .iiot-capability-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .iiot-service-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .iiot-solution-layout {
+    gap: 50px;
+  }
+
+  .iiot-tech-layout {
+    gap: 50px;
+  }
+
+  .iiot-architecture-flow {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 900px) {
+  .iiot-hero {
+    min-height: auto;
+    padding: 90px 0;
+  }
+
+  .iiot-hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .iiot-hero-content {
+    max-width: 760px;
+  }
+
+  .iiot-hero-visual {
+    justify-content: flex-start;
+  }
+
+  .iiot-system-card {
+    max-width: 680px;
+  }
+
+  .iiot-solution-layout,
+  .iiot-tech-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .iiot-solution-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .iiot-heading-left {
+    max-width: 720px;
+  }
+}
+
+@media (max-width: 640px) {
+  .iiot-container {
+    width: min(100% - 30px, 1180px);
+  }
+
+  .iiot-hero {
+    padding: 70px 0;
+  }
+
+  .iiot-hero h1 {
+    font-size: 42px;
+  }
+
+  .iiot-hero-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .iiot-btn {
+    width: 100%;
+  }
+
+  .iiot-hero-points {
+    flex-direction: column;
+    gap: 11px;
+  }
+
+  .iiot-system-main {
+    padding: 20px 14px;
+  }
+
+  .iiot-system-flow {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .iiot-flow-line {
+    width: 1px;
+    height: 25px;
+
+    margin: 0 auto;
+  }
+
+  .iiot-flow-line::after {
+    right: -3px;
+    top: auto;
+    bottom: 0;
+
+    transform: rotate(135deg);
+  }
+
+  .iiot-code-line {
+    grid-template-columns: 24px 1fr;
+
+    padding: 0 7px;
+  }
+
+  .iiot-code-line em {
+    display: none;
+  }
+
+  .iiot-system-footer {
+    grid-template-columns: 1fr;
+  }
+
+  .iiot-system-footer div + div {
+    border-left: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .iiot-section {
+    padding: 75px 0;
+  }
+
+  .iiot-capability-grid,
+  .iiot-service-grid,
+  .iiot-solution-grid,
+  .iiot-tech-list {
+    grid-template-columns: 1fr;
+  }
+
+  .iiot-capability-card,
+  .iiot-service-card {
+    padding: 23px;
+  }
+
+  .iiot-service-card > p {
+    min-height: auto;
+  }
+
+  .iiot-solution-card {
+    min-height: 180px;
+  }
+
+  .iiot-architecture {
+    padding: 75px 0;
+  }
+
+  .iiot-architecture-flow {
+    flex-direction: column;
+  }
+
+  .iiot-architecture-node {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .iiot-architecture-connector {
+    transform: rotate(90deg);
+  }
+
+  .iiot-cta {
+    padding: 60px 0;
+  }
+
+  .iiot-cta-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .iiot-btn-light {
+    width: auto;
+  }
+}

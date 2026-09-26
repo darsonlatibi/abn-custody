@@ -1,0 +1,888 @@
+/* =========================================================
+   ABN CORPORATE WEBSITE
+   WEBSITE FOOTER
+   LIGHT / DARK THEME
+   RESPONSIVE
+   ========================================================= */
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.website-footer {
+  width: 100%;
+
+  margin-top: auto;
+
+  background: var(--bg-surface);
+
+  color: var(--text-primary);
+
+  border-top: 1px solid var(--border-color);
+
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+/* =========================================================
+   MAIN FOOTER
+   ========================================================= */
+
+.website-footer-main {
+  width: 100%;
+
+  padding: 58px 0 48px;
+
+  background: linear-gradient(
+    180deg,
+    var(--bg-surface-soft),
+    var(--bg-surface)
+  );
+}
+
+/* =========================================================
+   INNER
+   ========================================================= */
+
+.website-footer-inner {
+  width: min(100% - 40px, 1240px);
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(250px, 1.5fr)
+    minmax(120px, 0.7fr)
+    minmax(160px, 0.95fr)
+    minmax(120px, 0.7fr)
+    minmax(220px, 1.1fr);
+
+  gap: 38px;
+
+  align-items: flex-start;
+}
+
+/* =========================================================
+   COMPANY
+   ========================================================= */
+
+.website-footer-company {
+  min-width: 0;
+}
+
+.website-footer-brand {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 11px;
+
+  color: var(--text-primary);
+
+  text-decoration: none;
+}
+
+/* =========================================================
+   BRAND MARK
+   ========================================================= */
+
+.website-footer-brand-mark {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 10px;
+
+  background: var(--accent-soft);
+
+  border: 1px solid var(--border-color-focus);
+
+  color: var(--text-info);
+
+  font-size: 13px;
+  font-weight: 900;
+
+  letter-spacing: 0.04em;
+}
+
+/* =========================================================
+   BRAND TEXT
+   ========================================================= */
+
+.website-footer-brand-text {
+  display: flex;
+  flex-direction: column;
+
+  gap: 4px;
+
+  min-width: 0;
+}
+
+.website-footer-brand-text strong {
+  color: var(--text-primary);
+
+  font-size: 13px;
+  font-weight: 800;
+
+  line-height: 1.2;
+
+  letter-spacing: 0.02em;
+}
+
+.website-footer-brand-text span {
+  color: var(--text-muted);
+
+  font-size: 8px;
+  font-weight: 700;
+
+  line-height: 1.2;
+
+  letter-spacing: 0.12em;
+}
+
+/* =========================================================
+   DESCRIPTION
+   ========================================================= */
+
+.website-footer-description {
+  max-width: 420px;
+
+  margin: 18px 0 20px;
+
+  color: var(--text-secondary);
+
+  font-size: 11px;
+
+  line-height: 1.75;
+}
+
+/* =========================================================
+   CONTACT LIST
+   ========================================================= */
+
+.website-footer-contact-list {
+  display: flex;
+  flex-direction: column;
+
+  gap: 9px;
+}
+
+.website-footer-contact {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 8px;
+
+  width: fit-content;
+
+  color: var(--text-muted);
+
+  font-size: 10px;
+
+  line-height: 1.4;
+
+  text-decoration: none;
+}
+
+.website-footer-contact:hover {
+  color: var(--text-info);
+}
+
+.website-footer-contact svg {
+  flex-shrink: 0;
+
+  color: var(--text-info);
+}
+
+/* =========================================================
+   FOOTER COLUMNS
+   ========================================================= */
+
+.website-footer-column {
+  min-width: 0;
+}
+
+.website-footer-column h3 {
+  margin: 0 0 15px;
+
+  color: var(--text-primary);
+
+  font-size: 11px;
+  font-weight: 800;
+
+  letter-spacing: 0.06em;
+
+  text-transform: uppercase;
+}
+
+.website-footer-column nav {
+  display: flex;
+  flex-direction: column;
+
+  gap: 9px;
+}
+
+.website-footer-column nav a {
+  width: fit-content;
+
+  color: var(--text-muted);
+
+  font-size: 10px;
+
+  line-height: 1.4;
+
+  text-decoration: none;
+
+  transition:
+    color 0.15s ease,
+    transform 0.15s ease;
+}
+
+.website-footer-column nav a:hover {
+  color: var(--text-info);
+
+  transform: translateX(2px);
+}
+
+/* =========================================================
+   CTA
+   ========================================================= */
+
+.website-footer-cta {
+  min-width: 0;
+
+  padding: 19px;
+
+  background: var(--bg-surface);
+
+  border: 1px solid var(--border-color);
+
+  border-radius: 10px;
+
+  box-shadow: var(--shadow-sm);
+
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.website-footer-kicker {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: var(--text-info);
+
+  font-size: 8px;
+  font-weight: 800;
+
+  letter-spacing: 0.12em;
+}
+
+.website-footer-cta h3 {
+  margin: 0;
+
+  color: var(--text-primary);
+
+  font-size: 18px;
+
+  font-weight: 750;
+
+  line-height: 1.2;
+
+  letter-spacing: -0.02em;
+}
+
+.website-footer-cta p {
+  margin: 10px 0 16px;
+
+  color: var(--text-secondary);
+
+  font-size: 10px;
+
+  line-height: 1.65;
+}
+
+.website-footer-cta-button {
+  min-height: 35px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  padding: 0 12px;
+
+  border-radius: 7px;
+
+  background: var(--text-info);
+
+  color: #ffffff;
+
+  font-size: 9px;
+  font-weight: 800;
+
+  text-decoration: none;
+
+  transition:
+    background-color 0.15s ease,
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.website-footer-cta-button:hover {
+  background: var(--text-primary);
+
+  color: var(--bg-surface);
+
+  transform: translateY(-1px);
+
+  box-shadow: var(--shadow-sm);
+}
+
+.website-footer-cta-button svg {
+  flex-shrink: 0;
+}
+
+/* =========================================================
+   BOTTOM
+   ========================================================= */
+
+.website-footer-bottom {
+  width: 100%;
+
+  border-top: 1px solid var(--border-color);
+
+  background: var(--bg-surface);
+}
+
+/* =========================================================
+   BOTTOM INNER
+   ========================================================= */
+
+.website-footer-bottom-inner {
+  width: min(100% - 40px, 1240px);
+
+  min-height: 52px;
+
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+}
+
+/* =========================================================
+   COPYRIGHT
+   ========================================================= */
+
+.website-footer-copyright {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 7px;
+
+  min-width: 0;
+
+  color: var(--text-muted);
+
+  font-size: 9px;
+}
+
+.website-footer-copyright svg {
+  flex-shrink: 0;
+
+  color: var(--text-info);
+}
+
+/* =========================================================
+   LEGAL
+   ========================================================= */
+
+.website-footer-legal {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  color: var(--text-muted);
+
+  font-size: 9px;
+
+  white-space: nowrap;
+}
+
+.website-footer-legal a {
+  color: var(--text-muted);
+
+  text-decoration: none;
+
+  transition: color 0.15s ease;
+}
+
+.website-footer-legal a:hover {
+  color: var(--text-info);
+}
+
+.website-footer-legal > span {
+  opacity: 0.5;
+}
+
+/* =========================================================
+   DARK THEME
+   ========================================================= */
+
+[data-theme="dark"] .website-footer-main {
+  background: linear-gradient(
+    180deg,
+    var(--bg-surface-soft),
+    var(--bg-surface)
+  );
+}
+
+[data-theme="dark"] .website-footer-cta {
+  box-shadow: none;
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1100px) {
+  .website-footer-inner {
+    grid-template-columns:
+      minmax(240px, 1.4fr)
+      minmax(110px, 0.7fr)
+      minmax(150px, 0.9fr)
+      minmax(110px, 0.7fr);
+
+    gap: 28px;
+  }
+
+  .website-footer-cta {
+    grid-column: 1 / -1;
+  }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 760px) {
+  .website-footer-main {
+    padding: 40px 0 35px;
+  }
+
+  .website-footer-inner {
+    width: min(100% - 30px, 1240px);
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 28px 22px;
+  }
+
+  .website-footer-company {
+    grid-column: 1 / -1;
+  }
+
+  .website-footer-description {
+    max-width: 620px;
+  }
+
+  .website-footer-cta {
+    grid-column: 1 / -1;
+  }
+
+  .website-footer-bottom-inner {
+    width: min(100% - 30px, 1240px);
+
+    min-height: auto;
+
+    padding: 14px 0;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 8px;
+  }
+
+  .website-footer-legal {
+    flex-wrap: wrap;
+
+    white-space: normal;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+  .website-footer-main {
+    padding: 32px 0 28px;
+  }
+
+  .website-footer-inner {
+    width: min(100% - 24px, 1240px);
+
+    grid-template-columns: 1fr;
+
+    gap: 24px;
+  }
+
+  .website-footer-brand-mark {
+    width: 38px;
+    height: 38px;
+  }
+
+  .website-footer-brand-text strong {
+    font-size: 11px;
+  }
+
+  .website-footer-brand-text span {
+    font-size: 7px;
+  }
+
+  .website-footer-description {
+    margin-top: 15px;
+
+    font-size: 10px;
+  }
+
+  .website-footer-column h3 {
+    margin-bottom: 11px;
+  }
+
+  .website-footer-cta {
+    padding: 16px;
+  }
+
+  .website-footer-cta h3 {
+    font-size: 17px;
+  }
+
+  .website-footer-cta p {
+    font-size: 10px;
+  }
+
+  .website-footer-cta-button {
+    width: 100%;
+  }
+
+  .website-footer-bottom-inner {
+    width: min(100% - 24px, 1240px);
+  }
+}
+
+/* =========================================================
+   VERY SMALL
+   ========================================================= */
+
+@media (max-width: 360px) {
+  .website-footer-copyright {
+    align-items: flex-start;
+  }
+
+  .website-footer-copyright span {
+    line-height: 1.5;
+  }
+
+  .website-footer-legal {
+    font-size: 8px;
+  }
+}
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .website-footer,
+  .website-footer-cta,
+  .website-footer-column nav a,
+  .website-footer-cta-button {
+    transition: none;
+  }
+}
+
+/* =========================================================
+   FOOTER BRAND MARK
+   ========================================================= */
+
+.website-footer-brand-mark {
+  width: 44px;
+  height: 44px;
+
+  flex: 0 0 44px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 5px;
+
+  box-sizing: border-box;
+
+  border-radius: 10px;
+
+  background: var(--accent-soft);
+
+  border: 1px solid var(--border-color-focus);
+
+  overflow: hidden;
+}
+
+.website-footer-brand-logo {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+  .website-footer-brand-mark {
+    width: 40px;
+    height: 40px;
+
+    flex-basis: 40px;
+
+    padding: 4px;
+
+    border-radius: 9px;
+  }
+}
+
+@media (max-width: 360px) {
+  .website-footer-brand-mark {
+    width: 36px;
+    height: 36px;
+
+    flex-basis: 36px;
+
+    padding: 3px;
+  }
+}
+
+/* =========================================================
+   OFFICE MAP
+   ========================================================= */
+
+.website-footer-map {
+  width: 100%;
+  height: 180px;
+  margin-top: 22px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 10px;
+  background: #111;
+}
+
+.website-footer-map iframe {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border: 0;
+  filter: grayscale(20%);
+}
+
+.website-footer-map-link {
+  text-decoration: none;
+}
+
+.website-footer-map-link:hover {
+  opacity: 0.8;
+}
+
+.website-footer-map-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+  color: inherit;
+  text-decoration: none;
+  font-size: 13px;
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+}
+
+.website-footer-map-button:hover {
+  opacity: 0.75;
+  transform: translateX(2px);
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+  .website-footer-map {
+    height: 200px;
+    margin-top: 18px;
+  }
+}
+
+/* =========================================================
+   OFFICE LOCATION
+   ========================================================= */
+
+.website-footer-location {
+  align-items: flex-start;
+  text-decoration: none;
+}
+
+.website-footer-location span {
+  line-height: 1.6;
+}
+
+/* =========================================================
+   OFFICE MAP CARD
+   ========================================================= */
+
+.website-footer-map-card {
+  position: relative;
+  display: block;
+  width: 100%;
+  min-height: 190px;
+  margin-top: 22px;
+  overflow: hidden;
+
+  text-decoration: none;
+  color: inherit;
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.06),
+      rgba(255, 255, 255, 0.015)
+    ),
+    #111;
+
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    background 0.25s ease;
+}
+
+.website-footer-map-card::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+
+  background-size: 24px 24px;
+
+  pointer-events: none;
+}
+
+.website-footer-map-card:hover {
+  transform: translateY(-2px);
+
+  border-color: rgba(255, 255, 255, 0.28);
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.09),
+      rgba(255, 255, 255, 0.025)
+    ),
+    #111;
+}
+
+/* =========================================================
+   MAP CONTENT
+   ========================================================= */
+
+.website-footer-map-overlay {
+  position: relative;
+  z-index: 1;
+
+  min-height: 190px;
+  padding: 24px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  text-align: center;
+}
+
+.website-footer-map-overlay svg:first-child {
+  margin-bottom: 4px;
+}
+
+.website-footer-map-overlay strong {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+.website-footer-map-overlay > span {
+  font-size: 12px;
+  line-height: 1.6;
+  opacity: 0.65;
+}
+
+.website-footer-map-overlay small {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  margin-top: 8px;
+
+  font-size: 12px;
+  font-weight: 500;
+
+  opacity: 0.85;
+}
+
+.website-footer-map-overlay small svg {
+  transition: transform 0.2s ease;
+}
+
+.website-footer-map-card:hover .website-footer-map-overlay small svg {
+  transform: translateX(3px);
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+  .website-footer-map-card {
+    min-height: 180px;
+  }
+
+  .website-footer-map-overlay {
+    min-height: 180px;
+    padding: 20px;
+  }
+}

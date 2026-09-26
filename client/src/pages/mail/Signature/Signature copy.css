@@ -1,0 +1,971 @@
+/* =========================================================
+   SIGNATURE MANAGER
+   ========================================================= */
+
+.signature-manager-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 24px;
+
+  background: rgba(15, 23, 42, 0.45);
+  backdrop-filter: blur(3px);
+}
+
+/* =========================================================
+   MODAL
+   ========================================================= */
+
+.signature-manager {
+  width: min(1100px, 100%);
+  max-height: calc(100vh - 48px);
+
+  display: flex;
+  flex-direction: column;
+
+  overflow: hidden;
+
+  background: #ffffff;
+
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+
+  box-shadow:
+    0 20px 50px rgba(15, 23, 42, 0.18),
+    0 4px 12px rgba(15, 23, 42, 0.08);
+}
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.signature-manager-header {
+  min-height: 72px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 16px 20px;
+
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.signature-manager-header h2 {
+  margin: 0;
+
+  color: #0f172a;
+
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.signature-manager-header p {
+  margin: 4px 0 0;
+
+  color: #64748b;
+
+  font-size: 13px;
+}
+
+.signature-close-button {
+  width: 34px;
+  height: 34px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 0;
+  border-radius: 8px;
+
+  background: transparent;
+  color: #64748b;
+
+  cursor: pointer;
+
+  transition:
+    background 0.15s ease,
+    color 0.15s ease;
+}
+
+.signature-close-button:hover {
+  background: #f1f5f9;
+  color: #0f172a;
+}
+
+/* =========================================================
+   BODY
+   ========================================================= */
+
+.signature-manager-body {
+  min-height: 0;
+  flex: 1;
+
+  display: grid;
+  grid-template-columns: 300px minmax(0, 1fr);
+
+  overflow: hidden;
+}
+
+/* =========================================================
+   LIST PANEL
+   ========================================================= */
+
+.signature-list-panel {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  background: #f8fafc;
+
+  border-right: 1px solid #e2e8f0;
+}
+
+.signature-list-header {
+  min-height: 58px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 12px 14px;
+
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.signature-list-header strong {
+  color: #334155;
+
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.signature-new-button {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 5px;
+
+  padding: 7px 10px;
+
+  border: 1px solid #cbd5e1;
+  border-radius: 7px;
+
+  background: #ffffff;
+  color: #334155;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.15s ease,
+    border-color 0.15s ease;
+}
+
+.signature-new-button:hover {
+  background: #f1f5f9;
+  border-color: #94a3b8;
+}
+
+/* =========================================================
+   EMPTY
+   ========================================================= */
+
+.signature-empty {
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  padding: 30px;
+
+  color: #94a3b8;
+
+  text-align: center;
+}
+
+.signature-empty svg {
+  margin-bottom: 4px;
+}
+
+.signature-empty p {
+  margin: 0;
+
+  color: #64748b;
+
+  font-size: 13px;
+}
+
+.signature-empty button {
+  padding: 0;
+
+  border: 0;
+
+  background: transparent;
+  color: #2563eb;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.signature-empty button:hover {
+  text-decoration: underline;
+}
+
+/* =========================================================
+   SIGNATURE LIST
+   ========================================================= */
+
+.signature-list {
+  flex: 1;
+
+  overflow-y: auto;
+
+  padding: 8px;
+}
+
+.signature-list-item {
+  display: flex;
+  align-items: center;
+
+  margin-bottom: 4px;
+
+  border: 1px solid transparent;
+  border-radius: 8px;
+
+  background: transparent;
+
+  transition:
+    background 0.15s ease,
+    border-color 0.15s ease;
+}
+
+.signature-list-item:hover {
+  background: #ffffff;
+  border-color: #e2e8f0;
+}
+
+.signature-list-item.active {
+  background: #ffffff;
+  border-color: #cbd5e1;
+}
+
+.signature-list-main {
+  min-width: 0;
+  flex: 1;
+
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 10px;
+
+  border: 0;
+
+  background: transparent;
+
+  text-align: left;
+
+  cursor: pointer;
+}
+
+.signature-type-icon {
+  width: 32px;
+  height: 32px;
+
+  flex: 0 0 32px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 7px;
+
+  background: #e2e8f0;
+  color: #475569;
+}
+
+.signature-list-info {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 2px;
+}
+
+.signature-list-info strong {
+  overflow: hidden;
+
+  color: #334155;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.signature-list-info small {
+  color: #94a3b8;
+
+  font-size: 10px;
+
+  text-transform: uppercase;
+}
+
+/* =========================================================
+   LIST ACTIONS
+   ========================================================= */
+
+.signature-list-actions {
+  display: flex;
+  align-items: center;
+
+  gap: 2px;
+
+  padding-right: 5px;
+}
+
+.signature-list-actions button {
+  width: 28px;
+  height: 28px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 0;
+  border-radius: 6px;
+
+  background: transparent;
+  color: #64748b;
+
+  cursor: pointer;
+
+  transition:
+    background 0.15s ease,
+    color 0.15s ease;
+}
+
+.signature-list-actions button:hover {
+  background: #f1f5f9;
+  color: #0f172a;
+}
+
+/* =========================================================
+   DEFAULT STAR
+   ========================================================= */
+
+.signature-list-actions button.default-active {
+  color: #f59e0b;
+}
+
+.signature-list-actions button.default-active:hover {
+  background: #fffbeb;
+  color: #d97706;
+}
+
+/* =========================================================
+   DELETE BUTTON
+   ========================================================= */
+
+.signature-list-actions button:last-child:hover {
+  background: #fef2f2;
+  color: #dc2626;
+}
+
+/* =========================================================
+   EDITOR PANEL
+   ========================================================= */
+
+.signature-editor-panel {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  overflow-y: auto;
+
+  background: #ffffff;
+}
+
+.signature-editor-header {
+  padding: 18px 22px 14px;
+
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.signature-editor-header strong {
+  display: block;
+
+  color: #0f172a;
+
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.signature-editor-header span {
+  display: block;
+
+  margin-top: 4px;
+
+  color: #64748b;
+
+  font-size: 12px;
+}
+
+/* =========================================================
+   FORM
+   ========================================================= */
+
+.signature-form-group {
+  padding: 16px 22px 0;
+}
+
+.signature-form-group > label {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #334155;
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.signature-form-group input,
+.signature-form-group textarea {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+
+  background: #ffffff;
+  color: #0f172a;
+
+  font-family: inherit;
+  font-size: 13px;
+
+  outline: none;
+
+  transition:
+    border-color 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.signature-form-group input {
+  height: 40px;
+
+  padding: 0 11px;
+}
+
+.signature-form-group textarea {
+  min-height: 150px;
+
+  padding: 11px;
+
+  line-height: 1.55;
+
+  resize: vertical;
+}
+
+.signature-form-group input:focus,
+.signature-form-group textarea:focus {
+  border-color: #64748b;
+
+  box-shadow: 0 0 0 3px rgba(100, 116, 139, 0.12);
+}
+
+/* =========================================================
+   TYPE SELECTOR
+   ========================================================= */
+
+.signature-type-selector {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 8px;
+
+  padding: 16px 22px 0;
+}
+
+.signature-type-selector button {
+  min-height: 58px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+
+  background: #ffffff;
+  color: #64748b;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.15s ease,
+    border-color 0.15s ease,
+    color 0.15s ease;
+}
+
+.signature-type-selector button:hover {
+  background: #f8fafc;
+  border-color: #94a3b8;
+}
+
+.signature-type-selector button.active {
+  border-color: #64748b;
+
+  background: #f1f5f9;
+
+  color: #0f172a;
+}
+
+/* =========================================================
+   CANVAS
+   ========================================================= */
+
+.signature-canvas-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 7px;
+}
+
+.signature-canvas-label label {
+  color: #334155;
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.signature-canvas-label button {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 5px;
+
+  padding: 5px 8px;
+
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+
+  background: #ffffff;
+  color: #64748b;
+
+  font-size: 11px;
+
+  cursor: pointer;
+
+  transition:
+    background 0.15s ease,
+    color 0.15s ease;
+}
+
+.signature-canvas-label button:hover {
+  background: #f8fafc;
+  color: #334155;
+}
+
+.signature-canvas {
+  display: block;
+
+  width: 100%;
+  max-width: 700px;
+
+  height: 220px;
+
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+
+  background: #ffffff;
+
+  cursor: crosshair;
+
+  touch-action: none;
+}
+
+.signature-form-group > small {
+  display: block;
+
+  margin-top: 6px;
+
+  color: #94a3b8;
+
+  font-size: 11px;
+}
+
+/* =========================================================
+   UPLOAD
+   ========================================================= */
+
+.signature-upload-box {
+  min-height: 180px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px dashed #cbd5e1;
+  border-radius: 10px;
+
+  background: #f8fafc;
+}
+
+.signature-upload-button {
+  min-width: 240px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 7px;
+
+  padding: 30px;
+
+  border: 0;
+
+  background: transparent;
+  color: #64748b;
+
+  cursor: pointer;
+}
+
+.signature-upload-button svg {
+  color: #94a3b8;
+}
+
+.signature-upload-button strong {
+  color: #334155;
+
+  font-size: 13px;
+}
+
+.signature-upload-button span {
+  color: #94a3b8;
+
+  font-size: 11px;
+}
+
+.signature-upload-button:hover strong {
+  color: #0f172a;
+}
+
+.signature-upload-preview {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 20px;
+}
+
+.signature-upload-preview img {
+  display: block;
+
+  max-width: 100%;
+  max-height: 130px;
+
+  object-fit: contain;
+}
+
+.signature-upload-preview button {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 5px;
+
+  padding: 6px 10px;
+
+  border: 1px solid #fecaca;
+  border-radius: 6px;
+
+  background: #ffffff;
+  color: #dc2626;
+
+  font-size: 11px;
+
+  cursor: pointer;
+
+  transition:
+    background 0.15s ease,
+    border-color 0.15s ease;
+}
+
+.signature-upload-preview button:hover {
+  background: #fef2f2;
+  border-color: #fca5a5;
+}
+
+/* =========================================================
+   PREVIEW
+   ========================================================= */
+
+.signature-preview-section {
+  padding: 18px 22px 0;
+}
+
+.signature-preview-section > label {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #334155;
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.signature-preview {
+  min-height: 110px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 16px;
+
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+
+  background: #f8fafc;
+
+  overflow: hidden;
+}
+
+.signature-preview-text {
+  color: #334155;
+
+  font-size: 13px;
+
+  line-height: 1.5;
+}
+
+.signature-preview-text span,
+.signature-preview-image span {
+  color: #94a3b8;
+
+  font-size: 12px;
+}
+
+.signature-preview-image {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+}
+
+.signature-preview-image img {
+  display: block;
+
+  max-width: 100%;
+  max-height: 110px;
+
+  object-fit: contain;
+}
+
+/* =========================================================
+   EDITOR FOOTER
+   ========================================================= */
+
+.signature-editor-footer {
+  margin-top: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  gap: 8px;
+
+  padding: 18px 22px;
+
+  border-top: 1px solid #e2e8f0;
+}
+
+.signature-cancel-button,
+.signature-save-button {
+  min-height: 36px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 6px;
+
+  padding: 0 12px;
+
+  border-radius: 7px;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.15s ease,
+    border-color 0.15s ease,
+    color 0.15s ease;
+}
+
+.signature-cancel-button {
+  border: 1px solid #cbd5e1;
+
+  background: #ffffff;
+  color: #475569;
+}
+
+.signature-cancel-button:hover {
+  background: #f8fafc;
+}
+
+.signature-save-button {
+  border: 1px solid #334155;
+
+  background: #334155;
+  color: #ffffff;
+}
+
+.signature-save-button:hover {
+  background: #1e293b;
+}
+
+/* =========================================================
+   FOCUS ACCESSIBILITY
+   ========================================================= */
+
+.signature-manager button:focus-visible,
+.signature-manager input:focus-visible,
+.signature-manager textarea:focus-visible {
+  outline: 2px solid #64748b;
+  outline-offset: 2px;
+}
+
+/* =========================================================
+   SCROLLBAR
+   ========================================================= */
+
+.signature-list::-webkit-scrollbar,
+.signature-editor-panel::-webkit-scrollbar {
+  width: 7px;
+}
+
+.signature-list::-webkit-scrollbar-track,
+.signature-editor-panel::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.signature-list::-webkit-scrollbar-thumb,
+.signature-editor-panel::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 10px;
+}
+
+.signature-list::-webkit-scrollbar-thumb:hover,
+.signature-editor-panel::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 800px) {
+  .signature-manager-overlay {
+    padding: 10px;
+  }
+
+  .signature-manager {
+    max-height: calc(100vh - 20px);
+  }
+
+  .signature-manager-body {
+    grid-template-columns: 1fr;
+    overflow-y: auto;
+  }
+
+  .signature-list-panel {
+    max-height: 210px;
+
+    border-right: 0;
+    border-bottom: 1px solid #e2e8f0;
+  }
+
+  .signature-list {
+    max-height: 150px;
+  }
+
+  .signature-editor-panel {
+    overflow-y: visible;
+  }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 520px) {
+  .signature-manager-header {
+    padding: 14px;
+  }
+
+  .signature-manager-header h2 {
+    font-size: 16px;
+  }
+
+  .signature-manager-header p {
+    font-size: 12px;
+  }
+
+  .signature-type-selector {
+    grid-template-columns: 1fr;
+  }
+
+  .signature-form-group,
+  .signature-preview-section {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .signature-editor-footer {
+    padding: 14px;
+  }
+
+  .signature-canvas {
+    height: 160px;
+  }
+
+  .signature-list-actions button {
+    width: 30px;
+    height: 30px;
+  }
+}

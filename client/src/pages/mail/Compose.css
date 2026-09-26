@@ -1,0 +1,970 @@
+/* =========================================================
+   ABN DIGITAL & INDUSTRIAL TECHNOLOGY
+   COMPOSE / MAIL CENTER
+   HOME DESIGN SYSTEM
+   THEME AWARE — LIGHT / DARK
+   ========================================================= */
+
+.compose-page {
+  --compose-background: var(--background-primary, #ffffff);
+  --compose-surface: var(--surface-primary, #ffffff);
+  --compose-surface-secondary: var(--surface-secondary, #f8fafc);
+  --compose-border: var(--border-color, #e2e8f0);
+
+  --compose-text: var(--text-primary, #172033);
+  --compose-text-secondary: var(--text-secondary, #64748b);
+
+  --compose-primary: #0f766e;
+  --compose-primary-dark: #115e59;
+  --compose-primary-soft: rgba(15, 118, 110, 0.08);
+
+  --compose-danger: #dc2626;
+  --compose-danger-soft: rgba(220, 38, 38, 0.08);
+
+  width: 100%;
+  min-height: 100%;
+  padding: 70px 0 90px;
+  box-sizing: border-box;
+
+  color: var(--compose-text);
+  background: var(--compose-background);
+
+  overflow: hidden;
+}
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.compose-header {
+  width: min(1180px, calc(100% - 48px));
+  margin: 0 auto 34px;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.compose-header h1 {
+  margin: 0;
+  font-size: clamp(30px, 4vw, 42px);
+  line-height: 1.1;
+  letter-spacing: -0.035em;
+  font-weight: 800;
+  color: var(--compose-text);
+}
+
+.compose-header p {
+  max-width: 680px;
+  margin: 12px 0 0;
+
+  color: var(--compose-text-secondary);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.compose-saved {
+  flex: 0 0 auto;
+
+  display: inline-flex;
+  align-items: center;
+
+  padding: 8px 12px;
+
+  border: 1px solid rgba(15, 118, 110, 0.18);
+  border-radius: 8px;
+
+  color: var(--compose-primary);
+  background: var(--compose-primary-soft);
+
+  font-size: 11px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* =========================================================
+   CARD
+   ========================================================= */
+
+.compose-card {
+  width: min(1180px, calc(100% - 48px));
+  margin: 0 auto;
+
+  border: 1px solid var(--compose-border);
+  border-radius: 16px;
+
+  background: var(--compose-surface);
+
+  box-shadow:
+    0 12px 30px rgba(15, 23, 42, 0.05),
+    0 2px 8px rgba(15, 23, 42, 0.03);
+
+  overflow: hidden;
+}
+
+/* =========================================================
+   FIELDS
+   ========================================================= */
+
+.compose-field-row {
+  min-height: 58px;
+
+  display: grid;
+  grid-template-columns: 88px minmax(0, 1fr);
+  align-items: center;
+
+  padding: 0 22px;
+
+  border-bottom: 1px solid var(--compose-border);
+
+  box-sizing: border-box;
+}
+
+.compose-field-row > label {
+  color: var(--compose-text-secondary);
+
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+
+.compose-field-row > input,
+.compose-field-wrapper,
+.compose-recipient-wrapper {
+  min-width: 0;
+}
+
+.compose-field-row input {
+  width: 100%;
+  min-width: 0;
+
+  padding: 8px 0;
+
+  border: 0;
+  outline: 0;
+
+  background: transparent;
+
+  color: var(--compose-text);
+
+  font: inherit;
+  font-size: 13px;
+  line-height: 1.5;
+
+  box-sizing: border-box;
+}
+
+.compose-field-row input::placeholder {
+  color: var(--compose-text-secondary);
+  opacity: 0.72;
+}
+
+.compose-field-row input:focus {
+  outline: 0;
+}
+
+/* =========================================================
+   FIELD ERROR
+   ========================================================= */
+
+.compose-field-wrapper,
+.compose-recipient-wrapper {
+  min-width: 0;
+}
+
+.compose-field-error {
+  display: block;
+
+  margin-top: 2px;
+
+  color: var(--compose-danger);
+
+  font-size: 10px;
+  line-height: 1.4;
+  font-weight: 600;
+}
+
+.compose-field-row input[aria-invalid="true"] {
+  color: var(--compose-danger);
+}
+
+/* =========================================================
+   RECIPIENT
+   ========================================================= */
+
+.compose-recipient-field {
+  min-width: 0;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.compose-recipient-field input {
+  flex: 1;
+}
+
+.compose-recipient-actions {
+  flex: 0 0 auto;
+
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.compose-recipient-actions button {
+  min-height: 28px;
+
+  padding: 0 8px;
+
+  border: 1px solid transparent;
+  border-radius: 7px;
+
+  background: transparent;
+
+  color: var(--compose-text-secondary);
+
+  font: inherit;
+  font-size: 11px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.compose-recipient-actions button:hover,
+.compose-recipient-actions button.active {
+  color: var(--compose-primary);
+  background: var(--compose-primary-soft);
+  border-color: rgba(15, 118, 110, 0.1);
+}
+
+/* =========================================================
+   EDITOR TOOLBAR
+   ========================================================= */
+
+.compose-editor-toolbar {
+  min-height: 50px;
+
+  display: flex;
+  align-items: center;
+  gap: 4px;
+
+  padding: 0 22px;
+
+  border-bottom: 1px solid var(--compose-border);
+
+  background: var(--compose-surface-secondary);
+
+  box-sizing: border-box;
+}
+
+.compose-editor-toolbar button {
+  width: 32px;
+  height: 32px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  border: 1px solid transparent;
+  border-radius: 8px;
+
+  background: transparent;
+  color: var(--compose-text-secondary);
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.compose-editor-toolbar button:hover {
+  background: var(--compose-surface);
+  border-color: var(--compose-border);
+  color: var(--compose-text);
+}
+
+.compose-toolbar-divider {
+  width: 1px;
+  height: 22px;
+
+  margin: 0 6px;
+
+  background: var(--compose-border);
+}
+
+/* =========================================================
+   EDITOR
+   ========================================================= */
+
+.compose-editor {
+  min-height: 380px;
+
+  padding: 24px;
+
+  outline: 0;
+
+  background: var(--compose-surface);
+  color: var(--compose-text);
+
+  font-size: 14px;
+  line-height: 1.8;
+
+  overflow-y: auto;
+
+  box-sizing: border-box;
+
+  transition:
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.compose-editor:empty::before {
+  content: attr(data-placeholder);
+
+  color: var(--compose-text-secondary);
+  opacity: 0.65;
+
+  pointer-events: none;
+}
+
+.compose-editor:focus {
+  box-shadow: inset 0 0 0 1px rgba(15, 118, 110, 0.06);
+}
+
+.compose-editor a {
+  color: var(--compose-primary);
+  text-decoration: underline;
+}
+
+.compose-editor ul {
+  margin: 10px 0;
+  padding-left: 24px;
+}
+
+.compose-editor ol {
+  margin: 10px 0;
+  padding-left: 24px;
+}
+
+/* =========================================================
+   ATTACHMENTS
+   ========================================================= */
+
+.compose-attachments {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+
+  padding: 14px 22px;
+
+  border-top: 1px solid var(--compose-border);
+
+  background: var(--compose-surface-secondary);
+
+  box-sizing: border-box;
+}
+
+.compose-attachment {
+  max-width: 340px;
+  min-width: 0;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 8px 10px;
+
+  border: 1px solid var(--compose-border);
+  border-radius: 9px;
+
+  background: var(--compose-surface);
+
+  color: var(--compose-text-secondary);
+
+  font-size: 11px;
+
+  box-sizing: border-box;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.compose-attachment:hover {
+  border-color: rgba(15, 118, 110, 0.2);
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.05);
+}
+
+.compose-attachment > svg {
+  flex: 0 0 auto;
+  color: var(--compose-primary);
+}
+
+.compose-attachment span {
+  min-width: 0;
+  max-width: 190px;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  color: var(--compose-text);
+
+  font-weight: 600;
+}
+
+.compose-attachment small {
+  flex: 0 0 auto;
+
+  white-space: nowrap;
+
+  color: var(--compose-text-secondary);
+
+  font-size: 9px;
+  font-weight: 600;
+}
+
+.compose-attachment button {
+  width: 22px;
+  height: 22px;
+
+  flex: 0 0 auto;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  border: 0;
+  border-radius: 6px;
+
+  background: transparent;
+
+  color: var(--compose-text-secondary);
+
+  font-size: 17px;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.compose-attachment button:hover {
+  background: var(--compose-danger-soft);
+  color: var(--compose-danger);
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.compose-footer {
+  min-height: 74px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 16px;
+
+  padding: 14px 22px;
+
+  border-top: 1px solid var(--compose-border);
+
+  background: var(--compose-surface-secondary);
+
+  box-sizing: border-box;
+}
+
+.compose-footer-left {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* =========================================================
+   SEND
+   ========================================================= */
+
+.compose-send-button {
+  min-height: 42px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  padding: 0 18px;
+
+  border: 1px solid transparent;
+  border-radius: 10px;
+
+  background: var(--compose-primary);
+
+  color: #ffffff;
+
+  font: inherit;
+  font-size: 12px;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  box-shadow: 0 10px 25px rgba(15, 118, 110, 0.16);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.compose-send-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+
+  background: var(--compose-primary-dark);
+
+  box-shadow: 0 14px 30px rgba(15, 118, 110, 0.22);
+}
+
+.compose-send-button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.compose-send-button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* =========================================================
+   ICON BUTTON
+   ========================================================= */
+
+.compose-icon-button {
+  width: 42px;
+  height: 42px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  border: 1px solid var(--compose-border);
+  border-radius: 10px;
+
+  background: var(--compose-surface);
+
+  color: var(--compose-text-secondary);
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.compose-icon-button:hover {
+  transform: translateY(-1px);
+
+  background: var(--compose-primary-soft);
+  border-color: rgba(15, 118, 110, 0.18);
+
+  color: var(--compose-primary);
+}
+
+/* =========================================================
+   SAVE DRAFT
+   ========================================================= */
+
+.compose-draft-button {
+  min-height: 42px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  padding: 0 13px;
+
+  border: 1px solid var(--compose-border);
+  border-radius: 10px;
+
+  background: var(--compose-surface);
+
+  color: var(--compose-text-secondary);
+
+  font: inherit;
+  font-size: 11px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.compose-draft-button:hover {
+  transform: translateY(-1px);
+
+  background: var(--compose-primary-soft);
+  border-color: rgba(15, 118, 110, 0.18);
+
+  color: var(--compose-primary);
+}
+
+/* =========================================================
+   DISCARD
+   ========================================================= */
+
+.compose-discard-button {
+  min-height: 42px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  padding: 0 13px;
+
+  border: 1px solid transparent;
+  border-radius: 10px;
+
+  background: transparent;
+
+  color: var(--compose-text-secondary);
+
+  font: inherit;
+  font-size: 11px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.compose-discard-button:hover {
+  background: var(--compose-danger-soft);
+  border-color: rgba(220, 38, 38, 0.08);
+  color: var(--compose-danger);
+}
+
+/* =========================================================
+   DARK MODE
+   ========================================================= */
+
+[data-theme="dark"] .compose-page,
+.dark .compose-page {
+  --compose-background: #0b1220;
+  --compose-surface: #111827;
+  --compose-surface-secondary: #0f172a;
+
+  --compose-border: rgba(255, 255, 255, 0.08);
+
+  --compose-text: #f8fafc;
+  --compose-text-secondary: #94a3b8;
+
+  --compose-primary: #14b8a6;
+  --compose-primary-dark: #0d9488;
+  --compose-primary-soft: rgba(20, 184, 166, 0.1);
+}
+
+[data-theme="dark"] .compose-card,
+.dark .compose-card {
+  box-shadow:
+    0 18px 40px rgba(0, 0, 0, 0.24),
+    0 2px 10px rgba(0, 0, 0, 0.18);
+}
+
+[data-theme="dark"] .compose-send-button,
+.dark .compose-send-button {
+  color: #062e2a;
+}
+
+[data-theme="dark"] .compose-icon-button:hover,
+[data-theme="dark"] .compose-draft-button:hover,
+.dark .compose-icon-button:hover,
+.dark .compose-draft-button:hover {
+  background: rgba(20, 184, 166, 0.1);
+}
+
+[data-theme="dark"] .compose-editor,
+[data-theme="dark"] .compose-field-row input,
+.dark .compose-editor,
+.dark .compose-field-row input {
+  color: #f8fafc;
+}
+
+/* =========================================================
+   RESPONSIVE — 1100px
+   ========================================================= */
+
+@media (max-width: 1100px) {
+  .compose-page {
+    padding: 60px 0 80px;
+  }
+
+  .compose-header,
+  .compose-card {
+    width: min(100% - 40px, 1180px);
+  }
+
+  .compose-header {
+    margin-bottom: 28px;
+  }
+}
+
+/* =========================================================
+   RESPONSIVE — 900px
+   ========================================================= */
+
+@media (max-width: 900px) {
+  .compose-header {
+    align-items: flex-start;
+  }
+
+  .compose-card {
+    border-radius: 14px;
+  }
+
+  .compose-editor {
+    min-height: 340px;
+  }
+}
+
+/* =========================================================
+   RESPONSIVE — 640px
+   ========================================================= */
+
+@media (max-width: 640px) {
+  .compose-page {
+    padding: 50px 0 70px;
+  }
+
+  .compose-header,
+  .compose-card {
+    width: min(100% - 32px, 1180px);
+  }
+
+  .compose-header {
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 22px;
+  }
+
+  .compose-header h1 {
+    font-size: 32px;
+  }
+
+  .compose-header p {
+    font-size: 13px;
+  }
+
+  .compose-field-row {
+    grid-template-columns: 64px minmax(0, 1fr);
+    min-height: 54px;
+
+    padding: 0 14px;
+  }
+
+  .compose-editor-toolbar {
+    padding: 0 14px;
+  }
+
+  .compose-editor {
+    min-height: 300px;
+    padding: 18px;
+
+    font-size: 13px;
+  }
+
+  .compose-attachments {
+    padding: 12px 14px;
+  }
+
+  .compose-footer {
+    align-items: stretch;
+    flex-direction: column;
+
+    padding: 14px;
+  }
+
+  .compose-footer-left {
+    width: 100%;
+  }
+
+  .compose-send-button {
+    flex: 1;
+  }
+
+  .compose-draft-button {
+    flex: 1;
+  }
+
+  .compose-discard-button {
+    width: 100%;
+  }
+}
+
+/* =========================================================
+   RESPONSIVE — 480px
+   ========================================================= */
+
+@media (max-width: 480px) {
+  .compose-page {
+    padding: 40px 0 60px;
+  }
+
+  .compose-header,
+  .compose-card {
+    width: min(100% - 24px, 1180px);
+  }
+
+  .compose-header h1 {
+    font-size: 28px;
+  }
+
+  .compose-header p {
+    font-size: 12px;
+  }
+
+  .compose-saved {
+    padding: 7px 10px;
+    font-size: 10px;
+  }
+
+  .compose-recipient-actions {
+    display: none;
+  }
+
+  .compose-field-row {
+    grid-template-columns: 52px minmax(0, 1fr);
+
+    min-height: 52px;
+
+    padding: 0 11px;
+  }
+
+  .compose-field-row > label {
+    font-size: 11px;
+  }
+
+  .compose-field-row input {
+    font-size: 12px;
+  }
+
+  .compose-editor-toolbar {
+    gap: 2px;
+    padding: 0 10px;
+  }
+
+  .compose-editor-toolbar button {
+    width: 30px;
+    height: 30px;
+  }
+
+  .compose-editor {
+    min-height: 280px;
+    padding: 15px;
+
+    font-size: 12px;
+    line-height: 1.7;
+  }
+
+  .compose-attachments {
+    padding: 10px;
+  }
+
+  .compose-attachment {
+    width: 100%;
+    max-width: none;
+  }
+
+  .compose-attachment span {
+    max-width: none;
+    flex: 1;
+  }
+
+  .compose-footer-left {
+    display: grid;
+    grid-template-columns: 1fr 42px;
+    width: 100%;
+  }
+
+  .compose-send-button {
+    width: 100%;
+  }
+
+  .compose-icon-button {
+    width: 42px;
+    height: 42px;
+  }
+
+  .compose-draft-button {
+    grid-column: 1 / -1;
+    width: 100%;
+  }
+
+  .compose-discard-button {
+    width: 100%;
+  }
+}
+
+/* Inserted email tables */
+.compose-editor table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 12px 0;
+  table-layout: fixed;
+}
+
+.compose-editor th,
+.compose-editor td {
+  border: 1px solid #cbd5e1;
+  padding: 8px;
+  min-width: 60px;
+  vertical-align: top;
+  overflow-wrap: break-word;
+}
+
+.compose-editor th {
+  background: #f1f5f9;
+  font-weight: 600;
+  text-align: left;
+}
+
+.compose-editor td:focus,
+.compose-editor th:focus {
+  outline: 1px solid #64748b;
+}
+
+/* Toolbar button */
+.compose-editor-toolbar button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
